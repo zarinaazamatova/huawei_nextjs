@@ -6,6 +6,7 @@
   }, 
   "rules": {
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
     "no-console": "off",
