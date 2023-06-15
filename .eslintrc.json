@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript"],
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -9,10 +9,9 @@
     "react/jsx-one-expression-per-line": "off",
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
-    "no-console": "off",
+    "no-console": "warn",
     "func-names": "off",
     "no-process-exit": "off",
-    "object-shorthand": "off",
     "class-methods-use-this": "off"
   }
 }
