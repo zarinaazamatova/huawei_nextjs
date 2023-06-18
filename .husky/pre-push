@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm .husky/check_branch_naming.sh
+npm run check-branch-name;
 npm run test;
