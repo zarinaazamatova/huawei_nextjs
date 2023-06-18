@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run check-branch-name;
+run-p lint check-branch-name
 npm run test;
