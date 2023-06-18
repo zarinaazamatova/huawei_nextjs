@@ -1,5 +1,5 @@
 {
-   "pattern": "^(fix|feature|test|release){1}$/.+$"
+   "pattern": "^(fix|feature|test|release){1}$/+$"
    "errorMsg": "There is something wrong with your branch name. Your commit will be rejected. You should rename your branch to a valid name and try again."
 
 }
