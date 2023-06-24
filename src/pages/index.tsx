@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Title = styled.h1`
+const StyledH1 = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.green};
-`
+  color: ${({ theme }) => theme.colors.accent};
+`;
 
 export default function Home() {
-  return <Title>My page</Title>
+  return <StyledH1>My page</StyledH1>;
 }

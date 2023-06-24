@@ -45,7 +45,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --color"
+      "eslint --fix --color",
+      "tsc --noEmit"
     ]
   }
 }
