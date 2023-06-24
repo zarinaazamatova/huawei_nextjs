@@ -5,7 +5,7 @@ BRANCH_NAME=$(git symbolic-ref --short HEAD)
 BRANCH_PATTERN="^(feature|fix|test|release)/HNJ-[0-9]+-[a-zA-Z0-9-]+$"
 
 if [[ ! "$BRANCH_NAME" =~ $BRANCH_PATTERN ]]; then
-  echo "Invalid branch name format. Branch name should be in the format of <ticket type>/HNJ-<number>_<description>"
+  echo "Invalid branch name format. Branch name should be in the format of <ticket type>/HNJ-<number>-<description>"
   exit 1
 else
     echo "Branch name is valid"
