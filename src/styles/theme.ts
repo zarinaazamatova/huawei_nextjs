@@ -44,6 +44,7 @@ const defaultTheme = {
     light: '#ffffffbf',
     accent: '#da291c',
   },
+  
 };
 
 export default defaultTheme;
