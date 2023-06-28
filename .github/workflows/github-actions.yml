@@ -1,12 +1,6 @@
 name: huawei_nextjs
 
 on: 
-  push: 
-    branches: 
-      - main
-      - development
-      - 'release/*'
-      - 'feature/*'
   pull_request:
     branches: 
       - main
