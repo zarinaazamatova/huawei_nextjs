@@ -1,13 +1,20 @@
 name: huawei_nextjs
 
 on: 
-push: 
-  branches: [$development]
-pull_request:
-  branches: [$development]
+  push: 
+    branches: 
+      - main
+      - development
+      - 'release/*'
+      - 'feature/*'
+  pull_request:
+    branches: 
+      - main
+      - development
+      - 'release/*'
+      - 'feature/*'
 jobs:
   build:
-
     runs-on: ubuntu-latest
     
     steps:
