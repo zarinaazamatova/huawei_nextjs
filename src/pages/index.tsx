@@ -6,5 +6,5 @@ const StyledH1 = styled.h1`
 `;
 
 export default function Home() {
-  return <StyledH1>My page</StyledH1>;
+  return <StyledH1>My page + test</StyledH1>;
 }
