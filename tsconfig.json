@@ -24,9 +24,7 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": [ "./src/*"]
     }
   },
   "include": [
@@ -36,7 +34,7 @@
     "../.next/types/**/*.ts",
     "../huawei_nextjs/types.d.ts",
     ".next/types/**/*.ts"
-  ],
+, ".next/types/app/layout.ts"  ],
   "exclude": [
     "node_modules"
   ]

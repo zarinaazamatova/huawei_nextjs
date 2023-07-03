@@ -10,7 +10,8 @@
     "format": "npx prettier --write .",
     "test": "jest",
     "test:ci": "jest --ci",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tsc": "tsc"
   },
   "dependencies": {
     "next": "13.4.4",
