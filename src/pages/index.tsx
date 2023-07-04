@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-
-const StyledH1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.accent};
-`;
+import React from 'react';
+import Header from '@/components/Header/header';
 
 export default function Home() {
-  return <StyledH1>My page</StyledH1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
