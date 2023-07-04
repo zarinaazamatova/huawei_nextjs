@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import logo from '../../assets/png/logo.svg';
 import * as S from './header.styles';
-import logo from '../../assets/png-files/logo.svg';
-import list from '../../assets/png-files/list.png';
-import user from '../../assets/png-files/user.png';
-import arrow from '../../assets/png-files/chevron-down.png';
-import heart from '../../assets/png-files/heart.png';
+import Geolocation from '../../assets/svg/geolacation';
+import list from '../../assets/png/list.png';
+import user from '../../assets/png/user.png';
+import arrow from '../../assets/png/chevron-down.png';
+import heart from '../../assets/png/heart.png';
 import cart from '../../assets/png-files/cart.png';
-import Geolocation from '../../assets/svg-files/geolacation';
 
 function Header() {
   return (
