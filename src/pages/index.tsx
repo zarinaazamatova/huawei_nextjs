@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Footer from '../components/footer/Footer';
+import {Footer} from '../components/Footer';
 import { footerNavData, copyRightList } from '../footerData'
 const StyledH1 = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.lg};

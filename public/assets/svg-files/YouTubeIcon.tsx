@@ -4,7 +4,7 @@
     fill: string
 }
  
- const YouTubeIcon = ({width, height, fill }: YouTubeIconProps) => {
+export const YouTubeIcon = ({width, height, fill }: YouTubeIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 18 12" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -13,4 +13,3 @@
         </svg>
     )
 }
-export default YouTubeIcon;

@@ -1,10 +1,10 @@
-   interface TikTokIconProps {
+   type TikTokIconProps = {
     width: string;
     height: string;
     fill: string
 }
  
- const TikTokIcon = ({width, height, fill }: TikTokIconProps) => {
+export const TikTokIcon = ({width, height, fill }: TikTokIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 16 18" fill="none">
             <path
@@ -13,4 +13,3 @@
         </svg>
     )
 }
-export default TikTokIcon;

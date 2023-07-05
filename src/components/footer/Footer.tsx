@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Form from '../form/Form';
-import List from '../list/List';
+import {Form} from '../Form';
+import {List} from '../List';
 import { StyledFooterContainer, StyledSocialLinksBar, StyledFooterContent,StyledFooterNavSection, StyledLinksSection, StyledFormWrapper, StyledCopyrightBar } from "./Footer.styles";
 import { TelegramIcon, YouTubeIcon, TikTokIcon, VKIcon, OKIcon, AppStoreIcon, GooglePlayIcon, CheckMarkIcon } from '../../../public/assets/svg-files'
 import { yandex, visaCard, masterCard, mirCard } from '../../../public/assets/png-files';
@@ -26,8 +26,8 @@ type CopyrightItem  = {
 type CopyRightListProps = CopyrightItem[]
 
 
-const Footer = ({footerNavData, copyRightList} : {footerNavData: footerNavProps, copyRightList: CopyRightListProps}) => {
-
+export const Footer = ({footerNavData, copyRightList} : {footerNavData: footerNavProps, copyRightList: CopyRightListProps}) => {
+console.log(TelegramIcon)
     const onSubmitForm = (string:string) => {
         console.log(string)
     }

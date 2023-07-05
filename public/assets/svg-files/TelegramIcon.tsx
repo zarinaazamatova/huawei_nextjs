@@ -1,11 +1,11 @@
  
-  interface TelegramIconProps {
+  type TelegramIconProps = {
     width: string;
     height: string;
     fill: string
 }
  
- const TelegramIcon = ({width, height, fill }: TelegramIconProps) => {
+export const TelegramIcon = ({width, height, fill }: TelegramIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 16 15" fill="none">
             <path
@@ -14,4 +14,3 @@
         </svg>
     )
 }
-export default TelegramIcon;

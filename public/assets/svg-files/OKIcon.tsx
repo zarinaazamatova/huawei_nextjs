@@ -1,10 +1,10 @@
- interface OKIconProps {
+ type OKIconProps = {
     width: string;
     height: string;
     fill: string
 }
  
- const OKIcon = ({width, height, fill }: OKIconProps) => {
+export const OKIcon = ({width, height, fill }: OKIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 12 19">
             <path 
@@ -16,4 +16,3 @@
         </svg>
     )
 }
-export default OKIcon;

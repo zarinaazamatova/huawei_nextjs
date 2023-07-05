@@ -8,7 +8,8 @@ id: string;
 buttonContent: ReactNode;
 onSubmit: (value: string) => void;
 }
-const Form = ({labelText = '', inputType, placeHolder, id, buttonContent, onSubmit}: FormProps) => {
+//cmd + click => shows where we use the form component?
+export const Form = ({labelText = '', inputType, placeHolder, id, buttonContent, onSubmit}: FormProps) => {
     const [value, setValue] = useState('')
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -24,5 +25,3 @@ const Form = ({labelText = '', inputType, placeHolder, id, buttonContent, onSubm
         </StyledForm>
     )
 }
-
-export default Form;

@@ -1,10 +1,10 @@
- interface CheckMarkIconProps {
+ type CheckMarkIconProps = {
     width: string;
     height: string;
     fill: string
 }
  
- const CheckMarkIcon = ({width, height, fill }: CheckMarkIconProps) => {
+ export const CheckMarkIcon = ({width, height, fill }: CheckMarkIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width={width} height={height}>
         <path fill-rule="evenodd"
@@ -13,4 +13,3 @@
     )
 }
 
-export default CheckMarkIcon;

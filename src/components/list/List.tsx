@@ -1,4 +1,5 @@
-import {StyledList} from './List.styles'
+import Link from 'next/link';
+import { StyledList } from './List.styles'
 type ListItem = {
   name: string | JSX.Element;
   url: string;
@@ -9,16 +10,14 @@ type ListProps = {
 }
 
 
- const List = ({listData} : ListProps) => {
+export const List = ({listData} : ListProps) => {
     return (
         <StyledList>
             {
-                listData.map((item, index) => {
-                    const {name, url} = item;
-                    return <li key={index}><a href={url}>{name}</a></li>
+                listData.map(({name, url}, index) => {
+                    return <li key={index}><Link href={url}>{name}</Link></li>
                 })
             }
         </StyledList>
     )
 }
-export default List;

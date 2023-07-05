@@ -1,10 +1,10 @@
-    interface VKIconProps {
+    type VKIconProps = {
     width: string;
     height: string;
     fill: string
 }
  
- const VKIcon = ({width, height, fill }: VKIconProps) => {
+export const VKIcon = ({width, height, fill }: VKIconProps) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 18 12" fill="none">
             <path
@@ -13,4 +13,3 @@
         </svg>
     )
 }
-export default VKIcon;
