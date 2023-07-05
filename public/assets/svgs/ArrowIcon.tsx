@@ -1,16 +1,14 @@
 import React from 'react';
 
-function ArrowIcon({
-  width,
-  height,
-  fill,
-  stroke,
-}: {
+type ArrowIconProps = {
   width: number;
   height: number;
   fill: string;
   stroke: string;
-}) {
+};
+
+export const ArrowIcon = ({ width, height, fill, stroke }: ArrowIconProps) => {
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 35 35">
       <g fill="none" fillRule="evenodd">
@@ -22,6 +20,4 @@ function ArrowIcon({
       </g>
     </svg>
   );
-}
-
-export default ArrowIcon;
+};

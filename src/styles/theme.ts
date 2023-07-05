@@ -30,7 +30,7 @@ const defaultTheme = {
     normal: 400,
     bold: 700,
   },
-  bgColors: {
+  backgroundColors: {
     secondary: '#efefef',
     primary: '#ffffff',
     light: '#ffffffbf',
