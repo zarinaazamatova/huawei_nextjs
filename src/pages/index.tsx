@@ -1,11 +1,8 @@
-import styled from 'styled-components';
 import React from 'react';
-import Header from '@/components/Header/header';
+import { Header } from '@/components/Header/components/Header';
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-    </>
-  );
-}
+const Home = () => {
+  return <Header />;
+};
+
+export default Home;

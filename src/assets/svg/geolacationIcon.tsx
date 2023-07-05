@@ -1,4 +1,10 @@
-const Geolocation = ({ width, height }: { width: number; height: number }) => {
+import React from 'react';
+
+type GeolocationProps = {
+  width: number;
+  height: number;
+};
+export const GeolocationIcon = ({ width, height }: GeolocationProps) => {
   return (
     <svg
       width={width}
@@ -27,4 +33,3 @@ const Geolocation = ({ width, height }: { width: number; height: number }) => {
     </svg>
   );
 };
-export default Geolocation;

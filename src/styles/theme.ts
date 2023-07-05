@@ -5,6 +5,7 @@ const defaultTheme = {
     l: '1024px',
   },
   spacing: {
+    '0': '0',
     '1': '8px',
     '2': '12px',
     '3': '16px',
