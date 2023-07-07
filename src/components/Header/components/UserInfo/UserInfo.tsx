@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
-import * as S from './UserInfo.Styles';
+import * as S from './UserInfo.styles';
 
 type UserProps = {
   url: string;
