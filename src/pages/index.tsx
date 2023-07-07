@@ -1,11 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Header } from '@/components/Header/components/Header';
 
-const StyledH1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.accent};
-`;
+const Home = () => {
+  return <Header />;
+};
 
-export default function Home() {
-  return <StyledH1>My page + test</StyledH1>;
-}
+export default Home;
