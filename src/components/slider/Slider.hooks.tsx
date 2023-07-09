@@ -1,8 +1,8 @@
 import React from 'react';
-import { Arrow } from '../Arrow/Arrow';
+import { Arrow } from '../Arrow';
 
 export const useSliderConfigs = () => {
-  const settings = {
+  const configs = {
     dots: true,
     arrow: true,
     infinite: true,
@@ -12,9 +12,9 @@ export const useSliderConfigs = () => {
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
-    responsive: [
+    nextArrow: <Arrow arrowType="nextArrow" />,
+    prevArrow: <Arrow arrowType="prevArrow" />,
+    ResponsiveObject: [
       {
         breakpoint: 1024,
       },
@@ -26,5 +26,5 @@ export const useSliderConfigs = () => {
       },
     ],
   };
-  return settings;
+  return configs;
 };

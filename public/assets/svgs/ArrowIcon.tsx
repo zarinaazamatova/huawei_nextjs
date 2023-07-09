@@ -5,12 +5,20 @@ type ArrowIconProps = {
   height: number;
   fill: string;
   stroke: string;
+  id: string;
+  className: string;
 };
 
-export const ArrowIcon = ({ width, height, fill, stroke }: ArrowIconProps) => {
-
+export const ArrowIcon = ({ width, height, fill, stroke, id, className }: ArrowIconProps) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 35 35">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      id={id}
+      className={className}
+      viewBox="0 0 35 35"
+    >
       <g fill="none" fillRule="evenodd">
         <path
           fill={fill}

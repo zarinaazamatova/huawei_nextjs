@@ -36,15 +36,13 @@ export const StyledSlider = styled(Slider)`
       font-size: ${({ theme }) => theme.spacing['6']};
       background-color: ${({ theme }) => theme.backgroundColors.primary};
     }
-}
-
-  #arrowPrev{
+  }
+  #prevArrow {
     left: ${({ theme }) => theme.spacing['4']};
     transform: translateY(-24px) translateX(-8px) rotate(180deg);
   }
 
-  #arrowNext {
+  #nextArrow {
     right: ${({ theme }) => theme.spacing['4']};
-    }
   }
 `;
