@@ -5,6 +5,7 @@ const defaultTheme = {
     l: '1024px',
   },
   spacing: {
+    '0': '0',
     '1': '8px',
     '2': '12px',
     '3': '16px',
@@ -37,6 +38,7 @@ const defaultTheme = {
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
+    blue: '#00afff',
   },
   textColors: {
     primary: '#1d364b',
@@ -44,7 +46,7 @@ const defaultTheme = {
     accent: '#da291c',
     orange: '#fe5000',
     white: '#ffffff',
-    darkgGrey: '#1d364b80',
+    darkGrey: '#1d364b80',
   },
 };
 
