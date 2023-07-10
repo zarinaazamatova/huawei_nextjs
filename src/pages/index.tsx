@@ -1,5 +1,5 @@
-import { Header } from '@/components/Header/components/Header';
-import { Slider } from '../components/Slider';
+import { Header } from '@/components/Header';
+import { Slider } from '@/components/Slider';
 
 const Home = () => {
   return (

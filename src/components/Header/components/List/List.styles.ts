@@ -18,12 +18,12 @@ export const StyledListItem = styled.li`
     text-decoration: none;
   `}
 `;
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled.span`
   ${({ theme }) => css`
     color: ${theme.textColors.primary};
   `}
 `;
-export const StyledAnchorButton = styled.a`
+export const StyledAnchorButton = styled.span`
   ${({ theme }) => css`
     color: ${theme.textColors.white};
   `}
