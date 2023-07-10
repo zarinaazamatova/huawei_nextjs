@@ -2,7 +2,7 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
-import { StyledSlider } from './slider.styles';
+import { StyledSlider } from './Slider.styles';
 import { useSliderConfigs } from './Slider.hooks';
 import {
   grandin,
