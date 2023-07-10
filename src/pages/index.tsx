@@ -1,13 +1,12 @@
 import { Header } from '@/components/Header/components/Header';
-import { Slider } from '../components/Slider';
+import { Slider } from '@/components/Slider';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
       <Slider />
     </>
   );
-}
-
+};
 export default Home;

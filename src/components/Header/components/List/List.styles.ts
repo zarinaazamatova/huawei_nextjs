@@ -36,7 +36,7 @@ export const StyledLiButton = styled.button`
     font-size: ${theme.fontSizes.xsm};
     line-height: 1.14;
     font-weight: ${theme.fontWeights.bold};
-    background-color: ${theme.bgColors.blue};
+    background-color: ${theme.backgroundColors.blue};
     color: ${theme.textColors.white};
     border-radius: 5px;
     border: 0;

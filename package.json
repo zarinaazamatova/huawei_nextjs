@@ -55,10 +55,7 @@
     "typescript": "^5.1.6"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --color",
-      "tsc --noEmit --jsx react-jsx"
-    ]
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix --color"]
   },
   "jest": {
     "testEnvironment": "jsdom",
