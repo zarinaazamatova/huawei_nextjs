@@ -5,7 +5,7 @@ export const StyledCatalog = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${theme.bgColors.orange};
+    background-color: ${theme.backgroundColors.orange};
     border-radius: 4px;
     padding: 10px;
   `}

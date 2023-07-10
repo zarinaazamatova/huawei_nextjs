@@ -18,12 +18,12 @@ export const StyledListItem = styled.li`
     text-decoration: none;
   `}
 `;
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled.span`
   ${({ theme }) => css`
     color: ${theme.textColors.primary};
   `}
 `;
-export const StyledAnchorButton = styled.a`
+export const StyledAnchorButton = styled.span`
   ${({ theme }) => css`
     color: ${theme.textColors.white};
   `}
@@ -36,7 +36,7 @@ export const StyledLiButton = styled.button`
     font-size: ${theme.fontSizes.xsm};
     line-height: 1.14;
     font-weight: ${theme.fontWeights.bold};
-    background-color: ${theme.bgColors.blue};
+    background-color: ${theme.backgroundColors.blue};
     color: ${theme.textColors.white};
     border-radius: 5px;
     border: 0;

@@ -13,11 +13,11 @@ type UserProps = {
 export const UserInfo = ({ url, name, icon, dropDown, amount }: UserProps) => {
   return (
     <S.StyledCart>
-      <span>{icon}</span>
+      <div>{icon}</div>
       <Link href={url} style={{ textDecoration: 'none', color: 'black' }}>
         {name}
       </Link>
-      {amount ? <S.StyledCounter>0</S.StyledCounter> : <span>{dropDown}</span>}
+      {amount ? <S.StyledCounter>0</S.StyledCounter> : <div>{dropDown}</div>}
     </S.StyledCart>
   );
 };

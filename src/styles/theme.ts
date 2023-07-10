@@ -31,14 +31,14 @@ const defaultTheme = {
     normal: 400,
     bold: 700,
   },
-  bgColors: {
+  backgroundColors: {
     secondary: '#efefef',
     primary: '#ffffff',
     light: '#ffffffbf',
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
-    blue: '#00AFFF',
+    blue: '#00afff',
   },
   textColors: {
     primary: '#1d364b',
