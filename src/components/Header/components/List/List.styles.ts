@@ -18,16 +18,6 @@ export const StyledListItem = styled.li`
     text-decoration: none;
   `}
 `;
-export const StyledAnchor = styled.a`
-  ${({ theme }) => css`
-    color: ${theme.textColors.primary};
-  `}
-`;
-export const StyledAnchorButton = styled.a`
-  ${({ theme }) => css`
-    color: ${theme.textColors.white};
-  `}
-`;
 export const StyledLiButton = styled.button`
   ${({ theme }) => css`
     list-style: none;
