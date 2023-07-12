@@ -37,7 +37,7 @@ export const News = () => {
       <div>
         <S.StyledInfoBlocks>
           {currentData.map((e: any) => (
-            <S.StyledInfoBlocksItem>
+            <S.StyledInfoBlocksItem key={e.id}>
               <S.StyledInfoBlocksItemLink>
                 <Image alt="event" src={e.img} width={290} height={160} />
                 <S.StyledInfoBlocksSnippet>
@@ -49,11 +49,13 @@ export const News = () => {
             </S.StyledInfoBlocksItem>
           ))}
         </S.StyledInfoBlocks>
-        <Pagination
-          pageCount={Math.ceil(news.length / dataPerPage)}
-          onPageChange={handlePageChange}
-          selectedPage={currentPage}
-        />
+        {news.length > 1 && (
+          <Pagination
+            pageCount={Math.ceil(news.length / dataPerPage)}
+            onPageChange={handlePageChange}
+            selectedPage={currentPage}
+          />
+        )}
       </div>
     </S.StyledNewsSection>
   );
