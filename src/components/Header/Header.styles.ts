@@ -11,6 +11,7 @@ export const StyledContainer = styled.div`
     background-color: ${theme.bgColors.secondary};
     font-family: 'Roboto', sans-serif;
     font-size: ${theme.fontSizes.base};
+    z-index: 3;
   `};
 `;
 
