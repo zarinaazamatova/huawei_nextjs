@@ -1,16 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
-import { Location } from '../Location';
-import { Bonus } from '../Bonus';
-import { Catalog } from '../Catalog';
-import { List } from '../List';
-import { UserInfo } from '../UserInfo/UserInfo';
-import logo from '../../../../assets/logo.svg';
+import { Location } from './components/Location';
+import { Bonus } from './components/Bonus';
+import { Catalog } from './components/Catalog';
+import { List } from './components/List';
+import { UserInfo } from './components/UserInfo';
+import logo from '../../assets/logo.svg';
 import * as S from './Header.styles';
-import user from '../../../../assets/user.png';
-import arrow from '../../../../assets/chevron-down.png';
-import heart from '../../../../assets/heart.png';
-import cart from '../../../../assets/cart.png';
+import user from '../../assets/user.png';
+import arrow from '../../assets/chevronDown.png';
+import heart from '../../assets/heart.png';
+import cart from '../../assets/cart.png';
 
 export const Header = () => {
   return (

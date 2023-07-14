@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { GeolocationIcon } from '../../../../assets/svg/geolacationIcon';
 import * as S from './Location.styles';
-import arrow from '../../../../assets/chevron-down.png';
+import arrow from '../../../../assets/chevronDown.png';
 
 export const Location = () => {
   return (

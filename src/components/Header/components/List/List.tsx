@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import * as S from './List.styles';
-import arrow from '../../../../assets/chevron-down.png';
+import arrow from '../../../../assets/chevronDown.png';
 
 const NavData = [
   { id: 1, name: 'Кошки', url: '' },
@@ -24,14 +24,14 @@ export const List = () => {
       {NavData.map(({ id, name, url, icon, button }) => {
         return button ? (
           <S.StyledLiButton key={id}>
-            <Link href={url} style={{ textDecoration: 'none' }}>
-              <S.StyledAnchorButton>{name}</S.StyledAnchorButton>
+            <Link href={url} style={{ textDecoration: 'none', color: 'white' }}>
+              {name}
             </Link>
           </S.StyledLiButton>
         ) : (
           <S.StyledListItem key={id}>
-            <Link href={url} style={{ textDecoration: 'none' }}>
-              <S.StyledAnchor>{name}</S.StyledAnchor>
+            <Link href={url} style={{ textDecoration: 'none', color: 'black' }}>
+              {name}
             </Link>
             {icon ? (
               <Image src={arrow} alt="arrow" width={12} height={15} style={{ padding: '5px' }} />
