@@ -7,7 +7,7 @@ import { Catalog } from './Catalog';
 jest.mock('../../../../assets/list.png', () => {
   return { __esModule: true, default: () => <div /> };
 });
-describe('Catalog', () => {
+describe('should render component without errors', () => {
   it('test', () => {
     render(
       <ThemeProvider theme={defaultTheme}>

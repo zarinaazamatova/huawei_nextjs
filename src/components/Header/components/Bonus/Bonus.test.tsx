@@ -4,7 +4,7 @@ import defaultTheme from '../../../../styles/theme';
 import { Bonus } from './Bonus';
 
 describe('Bonus', () => {
-  it('test', () => {
+  it('should render component without errors', () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <Bonus />
