@@ -1,27 +1,45 @@
-import { useState, FormEvent, ReactNode } from "react"
-import {StyledForm} from './Form.styles'
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../../styles/theme';
+import { useState, FormEvent, ReactNode, JSX } from 'react';
+import { StyledForm } from './Form.styles';
 type FormProps = {
-labelText?: string;
-inputType: string;
-placeHolder: string;
-id: string;
-buttonContent: ReactNode;
-onSubmit: (value: string) => void;
-}
-//cmd + click => shows where we use the form component?
-export const Form = ({labelText = '', inputType, placeHolder, id, buttonContent, onSubmit}: FormProps) => {
-    const [value, setValue] = useState('')
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        onSubmit(value)
-    }
-    return (
-        <StyledForm onSubmit={handleSubmit}>
-            {labelText && <label htmlFor={id}>{labelText}</label>}
-            <div className="input-container">
-                <input id={id} placeholder={placeHolder} type={inputType} value={value} onChange={(e)=> setValue(e.target.value)} />
-                <button type="submit"><span>{buttonContent}</span></button>
-            </div>
-        </StyledForm>
-    )
-}
+  labelText?: string;
+  inputType: string;
+  placeHolder: string;
+  id: string;
+  buttonContent: ReactNode;
+  onSubmit: (value: string) => void;
+};
+export const Form = ({
+  labelText = '',
+  inputType,
+  placeHolder,
+  id,
+  buttonContent,
+  onSubmit,
+}: FormProps): JSX.Element => {
+  const [value, setValue] = useState('');
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    onSubmit(value);
+  };
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <StyledForm onSubmit={handleSubmit} aria-label="form">
+        <label htmlFor={id}>{labelText}</label>
+        <div className="input-container">
+          <input
+            id={id}
+            placeholder={placeHolder}
+            type={inputType}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button type="submit">
+            <span>{buttonContent}</span>
+          </button>
+        </div>
+      </StyledForm>
+    </ThemeProvider>
+  );
+};

@@ -1,4 +1,4 @@
-export * from './TelegramIcon'
+export * from './TelegramIcon';
 export * from './YouTubeIcon';
 export * from './TikTokIcon';
 export * from './VKIcon';

@@ -1,4 +1,7 @@
+import { JSX } from 'react';
 import Image from 'next/image';
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../../styles/theme';
 import { Form } from '../Form';
 import { List } from '../List';
 import { InfoBlock } from './InfoBlock';
@@ -12,6 +15,7 @@ import {
   StyledCopyrightBar,
   StyledFooterNavWrapper,
 } from './Footer.styles';
+
 import {
   TelegramIcon,
   YouTubeIcon,
@@ -21,8 +25,9 @@ import {
   AppStoreIcon,
   GooglePlayIcon,
   CheckMarkIcon,
-} from '../../../public/assets/svg-files';
-import { yandex, visaCard, masterCard, mirCard } from '../../../public/assets/png-files';
+} from '../../../public/assets/svg';
+
+import { yandex, visaCard, masterCard, mirCard } from '../../../public/assets/png';
 
 const iconList = [
   {
@@ -37,6 +42,7 @@ const iconList = [
   { name: <VKIcon width="18" height="12" fill="white" />, url: 'https://vk.com/4lapy_ru' },
   { name: <OKIcon width="12" height="19" fill="white" />, url: 'https://ok.ru/chetyre.lapy' },
 ];
+
 const imageList = [
   {
     title: 'Наши приложения',
@@ -84,7 +90,6 @@ type FooterNavItem = {
   navContent: { name: string; url: string }[];
 };
 type footerNavProps = FooterNavItem[];
-
 type CopyrightItem = {
   name: string;
   url: string;
@@ -97,53 +102,50 @@ export const Footer = ({
 }: {
   footerNavData: footerNavProps;
   copyRightList: CopyRightListProps;
-}) => {
-  console.log(TelegramIcon);
-  const onSubmitForm = (string: string) => {
-    console.log(string);
-  };
-
+}): JSX.Element => {
+  const onSubmitForm = (formData: string) => {};
   return (
-    <StyledFooterContainer>
-      <StyledSocialLinksBar>
-        <List listData={iconList} />
-      </StyledSocialLinksBar>
+    <ThemeProvider theme={defaultTheme}>
+      <StyledFooterContainer>
+        <StyledSocialLinksBar>
+          <List listData={iconList} />
+        </StyledSocialLinksBar>
+        <StyledFooterContent>
+          <StyledFooterNavSection>
+            <StyledFooterNavWrapper>
+              {footerNavData.map((item: FooterNavItem, index) => {
+                return (
+                  <div key={index}>
+                    <div className="nav-list-name">{item.navHeader}</div>
+                    <List listData={item.navContent} />
+                  </div>
+                );
+              })}
+            </StyledFooterNavWrapper>
 
-      <StyledFooterContent>
-        <StyledFooterNavSection>
-          <StyledFooterNavWrapper>
-            {footerNavData.map((item: FooterNavItem, index) => {
-              return (
-                <div key={index}>
-                  <div className="nav-list-name">{item.navHeader}</div>
-                  <List listData={item.navContent} />
-                </div>
-              );
+            <StyledFormWrapper>
+              <Form
+                inputType="email"
+                placeHolder="Адрес эл. почты"
+                id="subscription"
+                buttonContent={<CheckMarkIcon width="16px" height="16px" fill="lightgray" />}
+                onSubmit={onSubmitForm}
+                labelText="Получайте рекомендации и выгодные предложения на почту"
+              />
+            </StyledFormWrapper>
+
+            <StyledCopyrightBar>
+              <List listData={copyRightList} />
+            </StyledCopyrightBar>
+          </StyledFooterNavSection>
+
+          <StyledLinksSection>
+            {imageList.map((item, index) => {
+              return <InfoBlock {...item} key={index} />;
             })}
-          </StyledFooterNavWrapper>
-          <StyledFormWrapper>
-            <Form
-              inputType="email"
-              placeHolder="Адрес эл. почты"
-              id="subscription"
-              buttonContent={<CheckMarkIcon width="16px" height="16px" fill="lightgray" />}
-              onSubmit={onSubmitForm}
-              labelText="Получайте рекомендации и выгодные предложения на почту"
-            />
-          </StyledFormWrapper>
-          <StyledCopyrightBar>
-            <List listData={copyRightList} />
-          </StyledCopyrightBar>
-        </StyledFooterNavSection>
-
-        <StyledLinksSection>
-          {imageList.map((item, index) => {
-            return <InfoBlock {...item} key={index} />;
-          })}
-        </StyledLinksSection>
-      </StyledFooterContent>
-    </StyledFooterContainer>
+          </StyledLinksSection>
+        </StyledFooterContent>
+      </StyledFooterContainer>
+    </ThemeProvider>
   );
 };
-
-export default Footer;

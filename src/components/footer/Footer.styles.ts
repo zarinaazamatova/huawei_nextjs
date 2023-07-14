@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 export const StyledFooterContainer = styled.footer`
   font-family: ${({ theme }) => theme.fontFamily.roboto[1]};
 `;
@@ -19,7 +19,6 @@ export const StyledSocialLinksBar = styled.section`
     justify-content: flex-start;
   }
 `;
-
 export const StyledFooterContent = styled.section`
   background-color: ${({ theme }) => theme.bgColors.secondary};
   padding: 30px 120px 80px;
@@ -85,7 +84,6 @@ export const StyledFormWrapper = styled.section`
     margin-bottom: 30px;
   }
 `;
-
 export const StyledLinksSection = styled.section`
   @media (max-width: ${({ theme }) => theme.screens.l}) {
     display: flex;
@@ -112,7 +110,6 @@ export const StyledCopyrightBar = styled.section`
       margin-right: 20px;
     }
   }
-
   @media (max-width: ${({ theme }) => theme.screens.l}) {
     top: 580px;
   }

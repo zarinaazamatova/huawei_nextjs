@@ -1,11 +1,9 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 export const StyledForm = styled.form`
-.input-container{
-position: relative;
-
-}
-.input-container input{
+  .input-container {
+    position: relative;
+  }
+  .input-container input {
     width: 100%;
     outline: none;
     padding: 0px 10px;
@@ -13,16 +11,13 @@ position: relative;
     border-radius: 5px;
     height: 35px;
     line-height: 35px;
-
-
-    
-}
-.input-container input::placeholder{
-    color: ${({theme})=>theme.textColors.secondary};
-    font-size: ${({theme})=>theme.fontSizes.base};
+  }
+  .input-container input::placeholder {
+    color: ${({ theme }) => theme.textColors.secondary};
+    font-size: ${({ theme }) => theme.fontSizes.base};
     font-family: ${({ theme }) => theme.fontFamily.arial[1]};
-}
-.input-container button{
+  }
+  .input-container button {
     position: absolute;
     top: 0;
     right: 0;
@@ -31,9 +26,8 @@ position: relative;
     background-color: transparent;
     height: 100%;
     vertical-align: middle;
-    &:hover{
-        cursor: pointer;
+    &:hover {
+      cursor: pointer;
     }
-}
-
-`
+  }
+`;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const StyledInfoBlockWrapper = styled.div`
   color: ${({ theme }) => theme.textColors.secondary};
   font-size: ${({ theme }) => theme.fontSizes.base};
@@ -7,7 +6,6 @@ export const StyledInfoBlockWrapper = styled.div`
   p {
     margin-top: 0;
   }
-
   div {
     display: flex;
   }
