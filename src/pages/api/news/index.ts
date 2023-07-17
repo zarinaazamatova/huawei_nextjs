@@ -1,6 +1,4 @@
-import { IncomingMessage, ServerResponse } from 'http';
-
-export default function handler(req: IncomingMessage, res: ServerResponse) {
+export default function handler(req, res) {
   const news = [
     {
       id: 1,
