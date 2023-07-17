@@ -7,10 +7,7 @@ import { News } from './News';
 jest.mock('./api', () => {
   return {
     __esModule: true,
-    getData: () =>
-      Promise.resolve({
-        news: [{ id: '1', title: 'test', img: '/test' }],
-      }),
+    fetchNews: () => Promise.resolve([{ id: '1', title: 'test', img: '/test' }]),
   };
 });
 

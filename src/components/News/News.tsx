@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Pagination } from './Pagination';
 import * as S from './News.styles';
+import { fetchNews } from './api';
+import { NewsItem } from './News.types';
 
 export const News = () => {
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState<NewsItem[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
   const pageSize = 16;
   const totalNews = 48;
@@ -14,16 +15,12 @@ export const News = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(
-          `http://localhost:3000/api/news?page=${currentPage}&pageSize=${pageSize}`,
-        );
-        const dataNews = await res.data;
-        setNews(dataNews);
+        const data = await fetchNews(currentPage, pageSize);
+        setNews(data);
       } catch (error) {
         console.log('Error fetching data:', error);
       }
     }
-
     fetchData();
   }, [currentPage]);
 
