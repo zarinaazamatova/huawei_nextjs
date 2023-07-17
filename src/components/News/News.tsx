@@ -1,28 +1,35 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getData } from './api';
 import { Pagination } from './Pagination';
 import * as S from './News.styles';
 
 export const News = () => {
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
+  const pageSize = 16;
+  const totalNews = 48;
 
   useEffect(() => {
-    getData()
-      .then((data) => setNews(data.news))
-      .catch((e) => e);
-  }, []);
+    async function fetchData() {
+      try {
+        const res = await axios.get(
+          `http://localhost:3000/api/news?page=${currentPage}&pageSize=${pageSize}`,
+        );
+        const dataNews = await res.data;
+        setNews(dataNews);
+      } catch (error) {
+        console.log('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  }, [currentPage]);
 
   const handlePageChange = (selectedPage: any) => {
     setCurrentPage(selectedPage.selected);
   };
-
-  const dataPerPage = 16;
-  const startIndex = currentPage * dataPerPage;
-  const endIndex = startIndex + dataPerPage;
-  const currentData = news.slice(startIndex, endIndex);
 
   return (
     <S.StyledNewsSection>
@@ -36,7 +43,7 @@ export const News = () => {
       </S.StyledH1>
       <div>
         <S.StyledInfoBlocks>
-          {currentData.map((e: any) => (
+          {news.map((e: any) => (
             <S.StyledInfoBlocksItem key={e.id}>
               <S.StyledInfoBlocksItemLink>
                 <Image alt="event" src={e.img} width={290} height={160} />
@@ -51,7 +58,7 @@ export const News = () => {
         </S.StyledInfoBlocks>
         {news.length > 1 && (
           <Pagination
-            pageCount={Math.ceil(news.length / dataPerPage)}
+            pageCount={Math.ceil(totalNews / pageSize)}
             onPageChange={handlePageChange}
             selectedPage={currentPage}
           />
