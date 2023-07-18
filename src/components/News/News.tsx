@@ -9,8 +9,8 @@ import { NewsItem } from './News.types';
 export const News = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const pageSize = 16;
-  const totalNews = 48;
+  const pageSize: number = 16;
+  const totalNews: number = 48;
 
   useEffect(() => {
     async function fetchData() {

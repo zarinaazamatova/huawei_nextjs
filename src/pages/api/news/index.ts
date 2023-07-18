@@ -1,4 +1,12 @@
-export default function handler(req, res) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+type CustomNextApiRequest = NextApiRequest & {
+  query: {
+    page: number;
+    pageSize: number;
+  };
+};
+export default function handler(req: CustomNextApiRequest, res: NextApiResponse) {
   const news = [
     {
       id: 1,
@@ -392,7 +400,7 @@ export default function handler(req, res) {
   ];
   const { page, pageSize } = req.query;
   const startIndex = page * pageSize;
-  const endIndex = startIndex + parseInt(pageSize, 10);
+  const endIndex = startIndex + pageSize;
 
   const paginatedData = news.slice(startIndex, endIndex);
 
