@@ -6,10 +6,10 @@ export const StyledBonusSide = styled.div`
 `;
 export const StyledMenu = styled.div`
   ${({ theme }) => css`
+    vertical-align: top;
     margin-left: 20px;
     color: ${theme.textColors.darkGrey};
     font-size: ${theme.fontSizes.sm};
     font-weight: ${theme.fontWeights.bold};
-    vertical-align: top;
   `};
 `;

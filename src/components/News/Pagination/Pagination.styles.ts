@@ -10,23 +10,23 @@ export const StyledPaginationContainer = styled(ReactPaginate)`
 
   li {
     ${({ theme }) => css`
-      display: inline-block;
-      text-align: center;
-      margin: 0 5px;
-      cursor: pointer;
-      list-style-type: none;
       position: relative;
+      display: inline-block;
       height: 34px;
+      margin: 0 5px;
       font-family: 'Roboto', sans-serif;
-      line-height: 32px;
       font-weight: ${theme.fontWeights.light};
       font-size: ${theme.fontSizes.md};
+      text-align: center;
+      line-height: 32px;
+      list-style-type: none;
+      cursor: pointer;
     `}
     a {
       padding: 10px;
-      text-decoration: none;
       border: 1px solid #ccc;
       border-radius: 3px;
+      text-decoration: none;
     }
     &.active a {
       ${({ theme }) => css`

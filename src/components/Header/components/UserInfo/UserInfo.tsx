@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import Link from 'next/link';
 import * as S from './UserInfo.styles';
 
 type UserProps = {
@@ -14,9 +13,7 @@ export const UserInfo = ({ url, name, icon, dropDown, amount }: UserProps) => {
   return (
     <S.StyledCart>
       <span>{icon}</span>
-      <Link href={url} style={{ textDecoration: 'none', color: 'black' }}>
-        {name}
-      </Link>
+      <S.StyledLink href={url}>{name}</S.StyledLink>
       {amount ? <S.StyledCounter>0</S.StyledCounter> : <span>{dropDown}</span>}
     </S.StyledCart>
   );

@@ -13,17 +13,20 @@ jest.mock('./api', () => {
 
 describe('<News />', () => {
   beforeEach(() => jest.clearAllMocks());
+
   it('should render news when api respond', async () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <News />
       </ThemeProvider>,
     );
+
     expect(
       screen.getByText(
         'Новости Четыре Лапы: мероприятия, открытие новых магазинов, новинки в ассортименте',
       ),
     ).toBeInTheDocument();
+
     expect(await screen.findByText('test')).toBeInTheDocument();
   });
 });

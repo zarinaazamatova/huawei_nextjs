@@ -1,12 +1,17 @@
+import React from 'react';
 import { StyledPaginationContainer } from './Pagination.styles';
 
 type PaginationProps = {
   pageCount: number;
-  onPageChange: any;
+  onPageChange: (selectedItem: { selected: number }) => void;
   selectedPage: number;
 };
 
-export const Pagination = ({ pageCount, onPageChange, selectedPage }: PaginationProps) => {
+export const Pagination: React.FC<PaginationProps> = ({
+  pageCount,
+  onPageChange,
+  selectedPage,
+}) => {
   return (
     <div>
       <StyledPaginationContainer

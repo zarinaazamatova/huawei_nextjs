@@ -1,4 +1,13 @@
+import Link from 'next/link';
 import styled, { css } from 'styled-components';
+
+export const StyledLink = styled(Link)`
+  ${({ theme }) => css`
+    color: ${theme.textColors.lightGrey};
+    font-size: ${theme.fontSizes.base};
+    text-decoration: none;
+  `}
+`;
 
 export const StyledNewsSection = styled.div`
   display: block;
@@ -26,66 +35,61 @@ export const StyledInfoBlocks = styled.div`
 `;
 
 export const StyledInfoBlocksItem = styled.div`
+  position: relative;
   display: block;
   width: 290px;
   height: 310px;
-  margin-right: 20px;
-  position: relative;
-  margin-bottom: 30px;
+  margin: 0 20px 30px 0;
 `;
 
 export const StyledInfoBlocksItemLink = styled.div`
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #e0e0e0;
-  position: relative;
   border-radius: 3px;
 `;
 export const StyledInfoBlocksItemTitle = styled.div`
   ${({ theme }) => css`
-    overflow: hidden;
+    position: relative;
     height: 63px;
-    text-overflow: ellipsis;
+    margin: 5px 20px;
     font-size: ${theme.fontSizes.l};
     font-weight: ${theme.fontWeights.bold};
     color: ${theme.textColors.primary};
-    margin: 5px 20px;
+    text-overflow: ellipsis;
     text-decoration: none;
-    position: relative;
+    overflow: hidden;
   `};
 `;
 
 export const StyledInfoBlocksSnippet = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.fontSizes.xxs};
-    font-weight: ${theme.fontWeights.bold};
-    display: inline-block;
     position: relative;
-    margin-bottom: 5px;
-    margin-top: 6px;
+    display: inline-block;
+    margin: 6px 0 5px 20px;
     padding: 5px 7px 0;
-    text-align: left;
-    text-transform: uppercase;
-    color: ${theme.textColors.orange};
     border: 1px solid #ff6927;
     border-radius: 2px;
-    margin-left: 20px;
+    font-size: ${theme.fontSizes.xxs};
+    font-weight: ${theme.fontWeights.bold};
+    color: ${theme.textColors.orange};
+    text-align: left;
+    text-transform: uppercase;
     text-decoration: none;
   `};
 `;
 
 export const StyledInfoBlocksItemDate = styled.time`
   ${({ theme }) => css`
-    display: block;
     position: absolute;
     bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
     left: 0;
-    margin: 0 20px;
-    color: ${theme.textColors.lightGrey};
+    display: block;
+    margin: 0 15px;
     font-size: ${theme.fontSizes.xs};
+    color: ${theme.textColors.lightGrey};
     line-height: 1.4;
     text-decoration: none;
   `};

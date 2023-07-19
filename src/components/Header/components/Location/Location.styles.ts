@@ -1,4 +1,9 @@
 import styled, { css } from 'styled-components';
+import Image from 'next/image';
+
+export const StyledImage = styled(Image)`
+  padding: 5px;
+`;
 
 export const StyledDivLocation = styled.div`
   position: relative;

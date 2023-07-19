@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { StyledLayout } from './Layout.styles';
 import { Header } from '../Header';
-import { News } from '../News';
 
-export const Layout = () => {
+type LayoutProps = {
+  children: ReactElement;
+};
+
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <StyledLayout>
       <Header />
-      <News />
+      {children}
     </StyledLayout>
   );
 };

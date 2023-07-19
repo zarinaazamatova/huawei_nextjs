@@ -401,7 +401,7 @@ export default function handler(req: CustomNextApiRequest, res: NextApiResponse)
   const { page, pageSize } = req.query;
   const pageNumber = Number(page);
   const pageSizeNumber = Number(pageSize);
-  const startIndex = pageNumber <= 1 ? pageSizeNumber : (pageNumber - 1) * pageSizeNumber;
+  const startIndex = pageNumber < 1 ? pageNumber : pageNumber * pageSizeNumber;
 
   const paginatedData = news.slice(startIndex, startIndex + pageSizeNumber);
 
