@@ -399,10 +399,11 @@ export default function handler(req: CustomNextApiRequest, res: NextApiResponse)
     },
   ];
   const { page, pageSize } = req.query;
-  const startIndex = page * pageSize;
-  const endIndex = startIndex + pageSize;
+  const pageNumber = Number(page);
+  const pageSizeNumber = Number(pageSize);
+  const startIndex = pageNumber <= 1 ? pageSizeNumber : (pageNumber - 1) * pageSizeNumber;
 
-  const paginatedData = news.slice(startIndex, endIndex);
+  const paginatedData = news.slice(startIndex, startIndex + pageSizeNumber);
 
   res.status(200).json(paginatedData);
 }
