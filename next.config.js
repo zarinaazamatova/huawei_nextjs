@@ -3,8 +3,11 @@
 const path = require('path');
 
 module.exports = {
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-        config.resolve.alias['~'] = path.resolve(__dirname, './src');
-        return config;
-    },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.resolve.alias['~'] = path.resolve(__dirname, './src');
+    return config;
+  },
+  images: {
+        domains: ['4lapy.ru'],
+  },
 };

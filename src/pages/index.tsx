@@ -1,16 +1,15 @@
-import styled from 'styled-components';
-import {Footer} from '../components/Footer';
+import { Footer } from '../components/Footer';
 import { footerNavData, copyRightList } from '../footerData'
-const StyledH1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.textColors.accent};
-`;
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-  <StyledH1>My page</StyledH1>
-  <Footer footerNavData={footerNavData} copyRightList = {copyRightList}/>
-  </>
+    <Layout>
+      <News />
+      <Footer footerNavData={footerNavData} copyRightList = {copyRightList}/>
+    </Layout>
   );
-}
+};
+
+export default Home;
