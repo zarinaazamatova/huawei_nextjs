@@ -2,8 +2,8 @@ import { JSX } from 'react';
 import Image from 'next/image';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
-import { Form } from '../form';
-import { List } from '../list';
+import { Form } from '../Form';
+import { List } from '../List';
 import { InfoBlock } from './InfoBlock';
 import {
   StyledFooterContainer,
