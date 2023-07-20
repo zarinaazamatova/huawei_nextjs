@@ -1,4 +1,3 @@
-import { Header } from '@/components/Header';
 import { Slider } from '@/components/Slider';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
