@@ -41,7 +41,7 @@ const defaultTheme = {
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
-    blue: '#00AFFF',
+    blue: '#00afff',
   },
   textColors: {
     primary: '#1d364b',
