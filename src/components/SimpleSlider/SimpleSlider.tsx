@@ -6,11 +6,11 @@ import { StyledSlider } from './SimpleSlider.styles';
 import { useSliderConfigs } from './Slider.hooks';
 import {
   grandin,
-  hills,
   hiPet,
-  ownat,
   royalCanin,
   unica,
+  ownat,
+  hills,
   wellKiss,
 } from '../../../public/assets/images';
 
