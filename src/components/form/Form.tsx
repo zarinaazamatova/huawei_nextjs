@@ -1,9 +1,10 @@
 import { ThemeProvider } from 'styled-components';
-import defaultTheme from '../../styles/theme';
 import { useState, FormEvent, ReactNode, JSX } from 'react';
+import defaultTheme from '../../styles/theme';
 import { StyledForm } from './Form.styles';
+
 type FormProps = {
-  labelText?: string;
+  labelText: string;
   inputType: string;
   placeHolder: string;
   id: string;

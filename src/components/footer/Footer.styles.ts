@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const StyledFooterContainer = styled.footer`
   font-family: ${({ theme }) => theme.fontFamily.roboto[1]};
 `;

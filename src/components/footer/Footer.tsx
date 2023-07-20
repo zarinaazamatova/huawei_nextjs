@@ -2,8 +2,8 @@ import { JSX } from 'react';
 import Image from 'next/image';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
-import { Form } from '../Form';
-import { List } from '../List';
+import { Form } from '../form';
+import { List } from '../list';
 import { InfoBlock } from './InfoBlock';
 import {
   StyledFooterContainer,
@@ -89,21 +89,24 @@ type FooterNavItem = {
   navHeader: string;
   navContent: { name: string; url: string }[];
 };
-type footerNavProps = FooterNavItem[];
+
+type FooterNavProps = FooterNavItem[];
+
 type CopyrightItem = {
   name: string;
   url: string;
 };
+
 type CopyRightListProps = CopyrightItem[];
 
 export const Footer = ({
   footerNavData,
   copyRightList,
 }: {
-  footerNavData: footerNavProps;
+  footerNavData: FooterNavProps;
   copyRightList: CopyRightListProps;
 }): JSX.Element => {
-  const onSubmitForm = (formData: string) => {};
+  const onSubmitForm = () => {};
   return (
     <ThemeProvider theme={defaultTheme}>
       <StyledFooterContainer>
@@ -113,9 +116,9 @@ export const Footer = ({
         <StyledFooterContent>
           <StyledFooterNavSection>
             <StyledFooterNavWrapper>
-              {footerNavData.map((item: FooterNavItem, index) => {
+              {footerNavData.map((item: FooterNavItem) => {
                 return (
-                  <div key={index}>
+                  <div key={item.navHeader}>
                     <div className="nav-list-name">{item.navHeader}</div>
                     <List listData={item.navContent} />
                   </div>
@@ -140,8 +143,8 @@ export const Footer = ({
           </StyledFooterNavSection>
 
           <StyledLinksSection>
-            {imageList.map((item, index) => {
-              return <InfoBlock {...item} key={index} />;
+            {imageList.map((item) => {
+              return <InfoBlock {...item} key={item.title} />;
             })}
           </StyledLinksSection>
         </StyledFooterContent>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const StyledInfoBlockWrapper = styled.div`
   color: ${({ theme }) => theme.textColors.secondary};
   font-size: ${({ theme }) => theme.fontSizes.base};

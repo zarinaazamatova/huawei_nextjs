@@ -1,5 +1,4 @@
 const defaultTheme = {
-  
   screens: {
     s: '480px',
     m: '768px',
