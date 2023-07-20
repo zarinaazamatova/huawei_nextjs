@@ -58,7 +58,7 @@ export const StyledLiButton = styled.button`
     padding: 2px 5px;
     border-radius: 5px;
     border: 0;
-    background-color: ${theme.bgColors.blue};
+    background-color: ${theme.backgroundColors.blue};
     font-size: ${theme.fontSizes.xsm};
     font-weight: ${theme.fontWeights.bold};
     background-color: ${theme.backgroundColors.blue};

@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
     display: block;
     width: 100%;
     box-sizing: border-box;
-    background-color: ${theme.bgColors.secondary};
+    background-color: ${theme.backgroundColors.secondary};
     font-family: 'Roboto', sans-serif;
     font-size: ${theme.fontSizes.base};
     z-index: 3;
