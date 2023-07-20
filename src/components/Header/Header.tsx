@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { Location } from './components/Location';
 import { Bonus } from './components/Bonus';
@@ -11,8 +10,12 @@ import user from '../../assets/user.png';
 import arrow from '../../assets/chevronDown.png';
 import heart from '../../assets/heart.png';
 import cart from '../../assets/cart.png';
+import { useGetPostsQuery } from '../../api/apiService';
 
 export const Header = () => {
+  const { data, error, isLoading } = useGetPostsQuery('');
+  console.log(data, isLoading);
+
   return (
     <S.StyledContainer>
       <S.StylePromotion>
