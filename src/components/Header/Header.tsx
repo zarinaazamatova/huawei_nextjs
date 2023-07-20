@@ -8,7 +8,7 @@ import { UserInfo } from './components/UserInfo';
 import logo from '../../assets/logo.svg';
 import * as S from './Header.styles';
 import user from '../../assets/user.png';
-import arrow from '../../assets/chevron-down.png';
+import arrow from '../../assets/chevronDown.png';
 import heart from '../../assets/heart.png';
 import cart from '../../assets/cart.png';
 

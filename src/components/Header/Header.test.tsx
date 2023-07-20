@@ -51,4 +51,4 @@ describe('<Header />', () => {
     expect(screen.getByText('Защита от паразитов')).toBeInTheDocument();
     expect(screen.getByText('Доставка от 1 часа')).toBeInTheDocument();
   });
-}); 
+});
