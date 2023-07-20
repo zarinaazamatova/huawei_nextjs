@@ -5,7 +5,7 @@ import defaultTheme from '../../styles/theme';
 import { Form } from './Form';
 
 describe('Form', () => {
-  it('renders form elements', () => {
+  it('should render form elements', () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <Form
@@ -21,11 +21,13 @@ describe('Form', () => {
     const labelElement = screen.getByText('testLabelText');
     const inputElement = screen.getByPlaceholderText('testPlaceHolderText');
     const buttonElement = screen.getByText('testButton');
+
     expect(labelElement).toBeInTheDocument();
     expect(buttonElement).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
   });
-  it('submits the form with the correct input value', async () => {
+
+  it('should submit the form with the correct input value', async () => {
     const onSubmitMock = jest.fn();
     render(
       <ThemeProvider theme={defaultTheme}>

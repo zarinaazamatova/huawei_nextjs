@@ -32,7 +32,7 @@ jest.mock('../../../public/assets/png', () => ({
 }));
 
 describe('Footer', () => {
-  it('renders prop data correctly', () => {
+  it('should render prop data correctly', () => {
     const footerNavData = [
       {
         navHeader: 'testHeader',

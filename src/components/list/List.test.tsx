@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { List } from './List';
 
 describe('List component', () => {
-  it('renders correctly', () => {
+  it('should render correctly', () => {
     const listData = [
       {
         name: 'List item 1',
