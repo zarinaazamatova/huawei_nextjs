@@ -1,4 +1,12 @@
 import styled, { css } from 'styled-components';
+import Link from 'next/link';
+
+export const StyledLink = styled(Link)`
+  ${({ theme }) => css`
+    color: ${theme.textColors.primary};
+    text-decoration: none;
+  `}
+`;
 
 export const StyledSelections = styled.div`
   ${({ theme }) => css`
@@ -18,20 +26,20 @@ export const StyledCart = styled.div`
   margin-left: 10px;
 `;
 export const StyledCounter = styled.span`
-  display: block;
   position: absolute;
-  z-index: 2;
   bottom: 18px;
   left: 15px;
+  display: block;
   min-width: 9px;
   height: 6px;
   padding: 2px;
-  font-size: 7px;
-  line-height: 1;
-  text-align: center;
-  border-radius: 14px;
-  color: #fff;
   background-color: #0a8449;
+  border-radius: 14px;
+  font-size: 7px;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  z-index: 2;
 `;
 export const StyledAnchor = styled.a`
   ${({ theme }) => css`

@@ -7,4 +7,7 @@ module.exports = {
     config.resolve.alias['~'] = path.resolve(__dirname, './src');
     return config;
   },
+  images: {
+        domains: ['4lapy.ru'],
+  },
 };

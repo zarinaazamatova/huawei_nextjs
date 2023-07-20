@@ -1,8 +1,13 @@
 import React from 'react';
-import { Header } from '../components/Header';
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
 
 const Home = () => {
-  return <Header />;
+  return (
+    <Layout>
+      <News />
+    </Layout>
+  );
 };
 
 export default Home;
