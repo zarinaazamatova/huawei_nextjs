@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Fetching
-        run: git fetch
-
       - name: Checkout code
         uses: actions/checkout@v2
 
