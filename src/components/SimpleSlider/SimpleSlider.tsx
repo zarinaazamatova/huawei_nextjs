@@ -12,7 +12,7 @@ import {
   royalCanin,
   unica,
   wellKiss,
-} from '../../../public/assets/images/index';
+} from '../../../public/assets/images';
 
 const sliderImages = [
   {
