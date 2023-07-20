@@ -1,12 +1,17 @@
 import { Header } from '@/components/Header';
 import { Slider } from '@/components/Slider';
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <Slider />
-    </>
+    <Layout>
+      <div>
+        <News />
+        <Slider />
+      </div>
+    </Layout>
   );
 };
+
 export default Home;

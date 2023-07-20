@@ -2,15 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const StyledContainer = styled.div`
   ${({ theme }) => css`
-    display: block;
     position: fixed;
     top: ${theme.spacing['0']};
     left: ${theme.spacing['0']};
+    display: block;
     width: 100%;
     box-sizing: border-box;
-    background-color: ${theme.backgroundColors.secondary};
+    background-color: ${theme.bgColors.secondary};
     font-family: 'Roboto', sans-serif;
     font-size: ${theme.fontSizes.base};
+    z-index: 3;
   `};
 `;
 
@@ -36,10 +37,10 @@ export const StyledUserInfo = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    line-height: 1.2;
-    color: ${theme.textColors.primary};
     font-size: ${theme.fontSizes.sm};
     font-weight: ${theme.fontWeights.bold};
+    color: ${theme.textColors.primary};
+    line-height: 1.2;
   `}
 `;
 
@@ -58,20 +59,20 @@ export const StyledCart = styled.div`
   margin-left: 10px;
 `;
 export const StyledCounter = styled.span`
-  display: block;
   position: absolute;
-  z-index: 2;
   bottom: 18px;
   left: 15px;
+  display: block;
   min-width: 9px;
   height: 6px;
   padding: 2px;
-  font-size: 7px;
-  line-height: 1;
-  text-align: center;
   border-radius: 14px;
+  font-size: 7px;
   color: #fff;
+  text-align: center;
+  line-height: 1;
   background-color: #0a8449;
+  z-index: 2;
 `;
 
 export const StyledNav = styled.nav`

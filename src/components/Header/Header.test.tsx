@@ -1,20 +1,36 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../../styles/theme';
+import { Header } from './Header';
 
-describe('mock test for React component', () => {
-  it('should have in document', () => {
-    render(<h1>Hello world </h1>);
-    expect(screen.getByText('Hello world')).toBeInTheDocument();
-  });
+jest.mock('../../assets/list.png', () => {
+  return { __esModule: true, default: () => <div /> };
 });
-
-/* import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Header from './header';
+jest.mock('../../assets/chevronDown.png', () => {
+  return { __esModule: true, default: () => <div /> };
+});
+jest.mock('../../assets/logo.svg', () => {
+  return { __esModule: true, default: () => <div /> };
+});
+jest.mock('../../assets/user.png', () => {
+  return { __esModule: true, default: () => <div /> };
+});
+jest.mock('../../assets/heart.png', () => {
+  return { __esModule: true, default: () => <div /> };
+});
+jest.mock('../../assets/cart.png', () => {
+  return { __esModule: true, default: () => <div /> };
+});
 
 describe('<Header />', () => {
   it('should render expected elements', () => {
-    render(<Header />);
+    render(
+      <ThemeProvider theme={defaultTheme}>
+        <Header />
+      </ThemeProvider>,
+    );
+
     expect(screen.getByText('Москва')).toBeInTheDocument();
     expect(screen.getByText('Бесплатная доставка от 500 ₽')).toBeInTheDocument();
     expect(screen.getByText('Бонусная программа')).toBeInTheDocument();
@@ -35,4 +51,4 @@ describe('<Header />', () => {
     expect(screen.getByText('Защита от паразитов')).toBeInTheDocument();
     expect(screen.getByText('Доставка от 1 часа')).toBeInTheDocument();
   });
-}); */
+}); 
