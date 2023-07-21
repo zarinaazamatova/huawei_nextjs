@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
     left: ${theme.spacing['0']};
     width: 100%;
     box-sizing: border-box;
-    background-color: ${theme.bgColors.secondary};
+    background-color: ${theme.backgroundColors.secondary};
     font-family: 'Roboto', sans-serif;
     font-size: ${theme.fontSizes.base};
     cursor: 'pointer';
