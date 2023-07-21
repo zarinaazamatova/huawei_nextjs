@@ -7,7 +7,7 @@ const axiosBaseQuery = axios.create({
   baseURL,
 });
 
-const baseQueryWithInterception = async (url) => {
+const baseQueryWithInterception = async (url: string) => {
   try {
     const response = await axiosBaseQuery(url);
     if (response.status >= 200 && response.status < 300) {
