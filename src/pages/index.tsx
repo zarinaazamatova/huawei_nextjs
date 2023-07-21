@@ -3,6 +3,7 @@ import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, AppStoreIcon } from '../../public/assets/svg';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
+import { SimpleSlider } from '@/components/SimpleSlider';
 
 const contactOptions = [
   {
@@ -29,10 +30,14 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <News />
+        <div>
+          <News />
+          <SimpleSlider />
+        </div>
       </Layout>
       <ContactUsWidget options={contactOptions} />
     </>
+  );
 };
 
 export default Home;

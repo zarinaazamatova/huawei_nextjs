@@ -5,7 +5,7 @@ export const StyledFooterContainer = styled.footer`
 `;
 export const StyledSocialLinksBar = styled.section`
   height: 60px;
-  background-color: ${({ theme }) => theme.bgColors.green};
+  background-color: ${({ theme }) => theme.backgroundColors.green};
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -21,7 +21,7 @@ export const StyledSocialLinksBar = styled.section`
   }
 `;
 export const StyledFooterContent = styled.section`
-  background-color: ${({ theme }) => theme.bgColors.secondary};
+  background-color: ${({ theme }) => theme.backgroundColors.secondary};
   padding: 30px 120px 80px;
   display: flex;
   gap: 100px;
