@@ -1,6 +1,8 @@
 import { Header } from '../components/Header';
 import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, AppStoreIcon } from '../../public/assets/svg';
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
 
 const contactOptions = [
   {
@@ -26,10 +28,11 @@ const contactOptions = [
 const Home = () => {
   return (
     <>
-      <Header />
+      <Layout>
+        <News />
+      </Layout>
       <ContactUsWidget options={contactOptions} />
     </>
-  );
 };
 
 export default Home;

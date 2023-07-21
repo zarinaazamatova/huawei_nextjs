@@ -5,6 +5,7 @@ type VKIconProps = {
   height: string;
   fill: string;
 };
+
 export const VKIcon = ({ width, height, fill }: VKIconProps): JSX.Element => {
   return (
     <svg

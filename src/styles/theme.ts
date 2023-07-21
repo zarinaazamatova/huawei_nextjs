@@ -18,10 +18,13 @@ const defaultTheme = {
     arial: ['Arial', 'sans-serif'],
   },
   fontSizes: {
+    xxs: '10px',
+    xs: '11px',
     xsm: '12px',
     sm: '13px',
     base: '14px',
     md: '16px',
+    l: '18px',
     lg: '20px',
     xl: '24px',
     xxl: '30px',
@@ -38,7 +41,7 @@ const defaultTheme = {
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
-    blue: '#00AFFF',
+    blue: '#00afff',
   },
   textColors: {
     primary: '#1d364b',
@@ -47,6 +50,7 @@ const defaultTheme = {
     orange: '#fe5000',
     white: '#ffffff',
     darkGrey: '#1d364b80',
+    lightGrey: '#a9a9a9',
   },
 };
 
