@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import defaultTheme from '../../styles/theme';
 import { ContactOptions } from './components/ContactOptions';
 import { StyledContainer } from './ContactUsWidget.styles';
 import { ContactOption } from './components/ContactOptions.types';
+import { SocialButton, XIcon } from '../../../public/assets/svg';
 
 type ContactUsWidgetProps = {
   options: ContactOption[];
@@ -15,10 +18,16 @@ export const ContactUsWidget = ({ options }: ContactUsWidgetProps) => {
   };
 
   return (
-    <StyledContainer onClick={toggleWidget}>
-      {isOpen ? 'Close' : 'Contact Us'}
-      {isOpen && <ContactOptions options={options} />}
-    </StyledContainer>
+    <ThemeProvider theme={defaultTheme}>
+      <StyledContainer onClick={toggleWidget} isOpen={isOpen}>
+        {isOpen ? (
+          <XIcon width="60px" height="60px" fill="#fe5000" />
+        ) : (
+          <SocialButton width="50px" height="50px" fill="white" stroke="#fe5000" />
+        )}
+        {isOpen && <ContactOptions options={options} />}
+      </StyledContainer>
+    </ThemeProvider>
   );
 };
 React.memo(ContactUsWidget);
