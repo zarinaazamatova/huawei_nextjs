@@ -1,9 +1,8 @@
-import { Header } from '../components/Header';
-import { ContactUsWidget } from '../components/ContactUsWidget';
-import { YouTubeIcon, VKIcon, AppStoreIcon } from '../../public/assets/svg';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
 import { SimpleSlider } from '@/components/SimpleSlider';
+import { ContactUsWidget } from '@/components/ContactUsWidget';
+import { YouTubeIcon, VKIcon, AppStoreIcon } from '../../public/assets/svg';
 
 const contactOptions = [
   {
