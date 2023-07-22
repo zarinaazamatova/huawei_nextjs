@@ -1,41 +1,51 @@
-import { Layout } from '@/components/Layout';
-import { News } from '@/components/News';
-import { SimpleSlider } from '@/components/SimpleSlider';
-import { ContactUsWidget } from '@/components/ContactUsWidget';
-import { YouTubeIcon, VKIcon, AppStoreIcon } from '../../public/assets/svg';
+import { Layout } from '../components/Layout';
+import { News } from '../components/News';
+import { SimpleSlider } from '../components/SimpleSlider';
+import { ContactUsWidget } from '../components/ContactUsWidget';
+import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
 
 const contactOptions = [
   {
-    name: <YouTubeIcon width="18" height="12" fill="white" />,
+    name: <YouTubeIcon width="18" height="18" fill="red" />,
     alt: 'YouTube',
     id: 0,
     url: 'https://www.youtube.com',
   },
   {
-    name: <VKIcon width="18" height="12" fill="white" />,
+    name: <VKIcon width="18" height="18" fill="blue" />,
     alt: 'ВКонтакте',
     id: 1,
     url: 'https://vk.com',
   },
   {
-    name: <AppStoreIcon width="18" height="12" />,
-    alt: 'Оплатить',
-    id: 2,
-    url: 'https://www.apple.com',
+    name: <OKIcon width="18" height="18" fill="orange" />,
+    alt: 'Одноклассники',
+    id: 1,
+    url: 'https://vk.com',
+  },
+  {
+    name: <TikTokIcon width="18" height="18" fill="black" />,
+    alt: 'ТикТок',
+    id: 1,
+    url: 'https://vk.com',
+  },
+  {
+    name: <TelegramIcon width="18" height="18" fill="darkblue" />,
+    alt: 'Телеграм',
+    id: 1,
+    url: 'https://vk.com',
   },
 ];
 
 const Home = () => {
   return (
-    <>
-      <Layout>
-        <div>
-          <News />
-          <SimpleSlider />
-        </div>
-      </Layout>
-      <ContactUsWidget options={contactOptions} />
-    </>
+    <Layout>
+      <div>
+        <News />
+        <SimpleSlider />
+        <ContactUsWidget options={contactOptions} />
+      </div>
+    </Layout>
   );
 };
 

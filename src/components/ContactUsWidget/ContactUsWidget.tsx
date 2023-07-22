@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
 import { ContactOptions } from './components/ContactOptions';
-import { StyledContainer } from './ContactUsWidget.styles';
+import { ClosedContainer, OpenedContainer, StyledContainer } from './ContactUsWidget.styles';
 import { ContactOption } from './components/ContactOptions.types';
 import { SocialButton, XIcon } from '../../../public/assets/svg';
 
@@ -19,11 +19,15 @@ export const ContactUsWidget = ({ options }: ContactUsWidgetProps) => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <StyledContainer onClick={toggleWidget} isOpen={isOpen}>
+      <StyledContainer onClick={toggleWidget}>
         {isOpen ? (
-          <XIcon width="60px" height="60px" fill="#fe5000" />
+          <OpenedContainer>
+            <XIcon width="60px" height="60px" fill="#fe5000" />
+          </OpenedContainer>
         ) : (
-          <SocialButton width="50px" height="50px" fill="white" stroke="#fe5000" />
+          <ClosedContainer>
+            <SocialButton width="50px" height="50px" fill="white" stroke="#fe5000" />
+          </ClosedContainer>
         )}
         {isOpen && <ContactOptions options={options} />}
       </StyledContainer>
