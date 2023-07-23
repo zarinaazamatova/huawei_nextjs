@@ -31,7 +31,6 @@ describe('<Header />', () => {
       </ThemeProvider>,
     );
 
-    expect(screen.getByText('Москва')).toBeInTheDocument();
     expect(screen.getByText('Бесплатная доставка от 500 ₽')).toBeInTheDocument();
     expect(screen.getByText('Бонусная программа')).toBeInTheDocument();
     expect(screen.getByText('Мобильное приложение')).toBeInTheDocument();

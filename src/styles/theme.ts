@@ -42,6 +42,7 @@ const defaultTheme = {
     green: '#0a8449',
     orange: '#fe5000',
     blue: '#00AFFF',
+    modalBg: '#4d5c74cc',
   },
   textColors: {
     primary: '#1d364b',
