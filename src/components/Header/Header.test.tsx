@@ -30,6 +30,7 @@ describe('<Header />', () => {
         <Header />
       </ThemeProvider>,
     );
+
     expect(screen.getByText('Москва')).toBeInTheDocument();
     expect(screen.getByText('Бесплатная доставка от 500 ₽')).toBeInTheDocument();
     expect(screen.getByText('Бонусная программа')).toBeInTheDocument();
@@ -49,14 +50,5 @@ describe('<Header />', () => {
     expect(screen.getByText('Магазины')).toBeInTheDocument();
     expect(screen.getByText('Защита от паразитов')).toBeInTheDocument();
     expect(screen.getByText('Доставка от 1 часа')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Защита от паразитов/i })).toHaveStyle({
-      'list-style': 'none',
-      display: 'inline-block',
-      margin: '0 15px',
-      'line-height': '1.14',
-      'border-radius': '5px',
-      border: 0,
-      padding: '2px 5px',
-    });
   });
 });

@@ -22,12 +22,23 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "no-param-reassign": [
       "error",
       {
         "props": true,
-        "ignorePropertyModificationsFor": ["state"]
+        "ignorePropertyModificationsFor": ["state", "ctx"]
       }
     ]
-  }
+  },
+  "ignorePatterns": ["next.config.js"]
 }

@@ -1,10 +1,15 @@
-import { Header } from '../components/Header';
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
+import { SimpleSlider } from '@/components/SimpleSlider';
 
 const Home = () => {
   return (
-    <>
-      <Header />
-    </>
+    <Layout>
+      <div>
+        <News />
+        <SimpleSlider />
+      </div>
+    </Layout>
   );
 };
 
