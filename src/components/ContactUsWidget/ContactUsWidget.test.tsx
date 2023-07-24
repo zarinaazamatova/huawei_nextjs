@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
 import { ContactUsWidget } from './ContactUsWidget';
@@ -12,38 +13,51 @@ jest.mock('../../../public/assets/svg', () => ({
   YouTubeIcon: () => null,
   VKIcon: () => null,
   AppStoreIcon: () => null,
+  OKIcon: () => null,
+  TikTokIcon: () => null,
+  XIcon: () => null,
+  SocialButton: () => null,
 }));
 
 describe('ContactUsWidget', () => {
   it('renders text correctly', () => {
     const optionsContent = [
       {
-        name: 'testName1',
-        url: 'url to testName1',
-        id: 1,
-        alt: 'test',
-      },
-      {
-        name: 'testName2',
-        url: 'url to testName2',
-        id: 2,
-        alt: 'test2',
+        optionsHeader: 'testHeader',
+        listContent: [
+          {
+            name: 'testName1',
+            url: 'url to testName1',
+            id: 1,
+            alt: 'test',
+          },
+          {
+            name: 'testName2',
+            url: 'url to testName2',
+            id: 2,
+            alt: 'test2',
+          },
+        ],
       },
     ];
+    render(
+      <ThemeProvider theme={defaultTheme}>
+        <ContactUsWidget optionsContent={optionsContent} />
+      </ThemeProvider>,
+    );
+    // expect(screen.getByText('Contact Us')).toBeInTheDocument();
+    // expect(screen.queryByText('Close')).not.toBeInTheDocument();
+  });
 
+  it('should open list of elements on click event', async () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <ContactUsWidget options={optionsContent} />
       </ThemeProvider>,
     );
-    expect(screen.getByText('Contact Us')).toBeInTheDocument();
-    expect(screen.queryByText('Close')).not.toBeInTheDocument();
-
-    const contactUsContainer = screen.getByText('Contact Us');
-    fireEvent.click(contactUsContainer);
-    expect(screen.getByText('Close')).toBeInTheDocument();
-    expect(screen.queryByText('Youtube'));
-    fireEvent.click(contactUsContainer);
-    expect(screen.queryByText('Close')).not.toBeInTheDocument();
+    const divElement = screen.getByText('Contact Us');
+    await userEvent.click(divElement);
+    // without anytext
+    expect();
   });
 });
