@@ -41,7 +41,7 @@ export const Location: React.FC = (): ReactElement => {
     <div>
       <S.StyledDivLocation onMouseEnter={handleImageHover} onMouseLeave={handleCloseModal}>
         <GeolocationIcon width={30} height={35} />
-        <S.StyledDivCity>{city}</S.StyledDivCity>
+        <S.StyledDivCity>{city || 'Москва'}</S.StyledDivCity>
         <S.StyledImage src={arrow} alt="arrow" className="icon-arrow-down" width={12} height={15} />
         <Modal isOpen={isOpen} onClose={handleCloseModal} onOpenCities={handleOpenCities} />
       </S.StyledDivLocation>

@@ -41,10 +41,18 @@ export const StyledWithIcon = styled.div`
 `;
 
 export const StyledCitiesBlock = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  padding: 0 10px;
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 0 10px;
+
+    .my-city.active {
+      color: ${theme.textColors.primary};
+      font-weight: ${theme.fontWeights.medium};
+      font-size: ${theme.fontSizes.base};
+    }
+  `}
 `;
 
 export const StyledGroupOfCitites = styled.div`
@@ -54,7 +62,13 @@ export const StyledGroupOfCitites = styled.div`
     font-size: ${theme.fontSizes.l};
     font-weight: ${theme.fontWeights.bold};
     text-align: left;
-    color: ${theme.textColors.primary};
+    color: ${theme.textColors.secondary};
     cursor: pointer;
+
+    .tab.active {
+      color: ${theme.textColors.primary};
+      font-weight: ${theme.fontWeights.bold};
+      font-size: ${theme.fontSizes.l};
+    }
   `}
 `;

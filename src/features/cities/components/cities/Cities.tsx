@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import { setCookie } from 'cookies-next';
 import * as S from './Cities.styles';
 import { fetchCities } from './api';
@@ -14,6 +14,7 @@ type TabComponentProps = {
 export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCities }) => {
   const [activeTab, setActiveTab] = useState('moscowMO');
   const [cities, setCities] = useState<CitiesItem[]>([]);
+  const [myCity, setMyCity] = useState('');
 
   useEffect(() => {
     async function fetchData(): Promise<void> {
@@ -27,14 +28,27 @@ export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCitie
     fetchData();
   }, [activeTab]);
 
+  const handleCityClick = useCallback(
+    (city: string) => {
+      setCookie('city', city);
+      setMyCity(city);
+      onCloseCities();
+    },
+    [onCloseCities],
+  );
+
+  const allCities = useMemo(() => {
+    return cities.map(({ id, name }) => (
+      <S.StyledWithIcon key={id} onClick={() => handleCityClick(name)}>
+        <GeolocationIcon width={30} height={35} />
+        <div className={`my-city ${myCity === name ? 'active' : ''}`}>{name}</div>
+      </S.StyledWithIcon>
+    ));
+  }, [cities, handleCityClick, myCity]);
+
   const modalRef = useRef<HTMLDivElement>(null);
   useOutsideClick(modalRef, onCloseCities);
   if (!isOpenCities) return null;
-
-  const handleCityClick = (city: string) => {
-    setCookie('city', city);
-    onCloseCities();
-  };
 
   return (
     <S.StyledModalOverlay className="modal-overlay">
@@ -42,24 +56,21 @@ export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCitie
         <div>
           {/* here will be a Form(input)  */}
           <S.StyledGroupOfCitites onClick={() => setActiveTab('moscowMO')}>
-            Москва и МО
+            <div className={`tab ${activeTab === 'moscowMO' ? 'active' : ''}`}>Москва и МО</div>
           </S.StyledGroupOfCitites>
           <S.StyledGroupOfCitites onClick={() => setActiveTab('bigCities')}>
-            Большие города
+            <div className={`tab ${activeTab === 'bigCities' ? 'active' : ''}`}>Большие города</div>
           </S.StyledGroupOfCitites>
         </div>
         <div>
-          <S.StyledCitiesBlock>
-            {cities.map(({ id, name }) => (
-              <S.StyledWithIcon key={id} onClick={() => handleCityClick(name)}>
-                <GeolocationIcon width={30} height={35} />
-                <div key={id}>{name}</div>
-              </S.StyledWithIcon>
-            ))}
-          </S.StyledCitiesBlock>
+          <S.StyledCitiesBlock>{allCities}</S.StyledCitiesBlock>
         </div>
       </S.StyledModal>
     </S.StyledModalOverlay>
   );
 };
-React.memo(Cities);
+
+/* styled.div`
+  ${({ isBold }) => isBold && `font-weight: 700`}
+  isBold = 
+`; */
