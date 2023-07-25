@@ -1,9 +1,4 @@
 import styled, { css } from 'styled-components';
-import Image from 'next/image';
-
-export const StyledImage = styled(Image)`
-  padding: 5px;
-`;
 
 export const StyledContainer = styled.div`
   ${({ theme }) => css`
@@ -13,7 +8,7 @@ export const StyledContainer = styled.div`
     display: block;
     width: 100%;
     box-sizing: border-box;
-    background-color: ${theme.bgColors.secondary};
+    background-color: ${theme.backgroundColors.secondary};
     font-family: 'Roboto', sans-serif;
     font-size: ${theme.fontSizes.base};
     z-index: 3;

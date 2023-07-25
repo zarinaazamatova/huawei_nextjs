@@ -1,8 +1,8 @@
 name: huawei_nextjs
 
-on: 
+on:
   pull_request:
-    branches: 
+    branches:
       - main
       - development
       - 'release/*'
@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,11 +19,11 @@ jobs:
         run: npm ci
 
       - name: Eslint
-        run: npm run lint -- --fix  
+        run: npm run lint -- --fix
 
       - name: Test
         run: npm run test
-              
+
       - name: Build
         run: npm run build
-      
+

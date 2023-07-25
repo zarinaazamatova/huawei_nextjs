@@ -18,7 +18,7 @@ export const News: React.FC = (): ReactElement => {
         const data = await fetchNews(currentPage, pageSize);
         setNews(data);
       } catch (error) {
-        console.log('Error fetching data:', error);
+        console.error(`Error fetching data: ${error}`);
       }
     }
     fetchData();

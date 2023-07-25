@@ -10,8 +10,8 @@ export const StyledCatalog = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: ${theme.backgroundColors.orange};
     padding: 10px;
-    background-color: ${theme.bgColors.orange};
     border-radius: 4px;
   `}
 `;

@@ -1,11 +1,14 @@
-import React from 'react';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
+import { SimpleSlider } from '@/components/SimpleSlider';
 
 const Home = () => {
   return (
     <Layout>
-      <News />
+      <div>
+        <News />
+        <SimpleSlider />
+      </div>
     </Layout>
   );
 };
