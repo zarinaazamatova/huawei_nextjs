@@ -12,7 +12,7 @@ export const StyledModalOverlay = styled.div`
     align-items: center;
     justify-content: center;
     padding: 40px 40px 40px 50px;
-    background-color: ${theme.bgColors.modalBg};;
+    background-color: ${theme.backgroundColors.modalBg};
     z-index: 2023;
   `}
 `;
@@ -23,7 +23,7 @@ export const StyledModal = styled.div`
     flex-direction: column;
     align-items: left;
     width: 800px;
-    background-color: ${theme.bgColors.primary};
+    background-color: ${theme.backgroundColors.primary};
     padding: 20px;
     margin: 0 auto;
     border-radius: 4px;

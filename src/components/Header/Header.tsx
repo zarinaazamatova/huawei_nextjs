@@ -28,7 +28,9 @@ export const Header = () => {
             url=""
             name="Войти"
             icon={<Image src={user} alt="user" className="icon-user" width={16} height={16} />}
-            dropDown={<S.StyledImage src={arrow} alt="arrow" width={12} height={15} />}
+            dropDown={
+              <Image src={arrow} alt="arrow" width={12} height={15} style={{ padding: '5px' }} />
+            }
             amount={false}
           />
           <UserInfo

@@ -35,15 +35,15 @@ const defaultTheme = {
     medium: 600,
     bold: 700,
   },
-  bgColors: {
+  backgroundColors: {
     secondary: '#efefef',
     primary: '#ffffff',
     light: '#ffffffbf',
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
+    modalBg: '#4d5c74d9',
     blue: '#00afff',
-    modalBg: '#4d5c74cc',
   },
   textColors: {
     primary: '#1d364b',

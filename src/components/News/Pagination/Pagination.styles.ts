@@ -30,7 +30,7 @@ export const StyledPaginationContainer = styled(ReactPaginate)`
     }
     &.active a {
       ${({ theme }) => css`
-        border-color: ${theme.bgColors.orange};
+        border-color: ${theme.backgroundColors.orange};
         color: ${theme.textColors.orange};
       `}
     }

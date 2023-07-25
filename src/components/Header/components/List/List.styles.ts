@@ -35,9 +35,22 @@ export const StyledListItem = styled.li`
     font-size: ${theme.fontSizes.sm};
     font-weight: ${theme.fontWeights.bold};
     text-decoration: none;
+  `}
+`;
+
+export const StyledAnchor = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.textColors.primary};
+  `}
+`;
+
+export const StyledAnchorButton = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.textColors.white};
     line-height: 1.14;
   `}
 `;
+
 export const StyledLiButton = styled.button`
   ${({ theme }) => css`
     display: inline-block;
@@ -45,9 +58,10 @@ export const StyledLiButton = styled.button`
     padding: 2px 5px;
     border-radius: 5px;
     border: 0;
-    background-color: ${theme.bgColors.blue};
+    background-color: ${theme.backgroundColors.blue};
     font-size: ${theme.fontSizes.xsm};
     font-weight: ${theme.fontWeights.bold};
+    background-color: ${theme.backgroundColors.blue};
     color: ${theme.textColors.white};
     line-height: 1.14;
     list-style: none;
