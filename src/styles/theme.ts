@@ -42,7 +42,7 @@ const defaultTheme = {
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
-    blue: '#00AFFF',
+    blue: '#00afff',
     modalBg: '#4d5c74cc',
   },
   textColors: {
