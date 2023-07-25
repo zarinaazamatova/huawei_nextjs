@@ -11,11 +11,9 @@ jest.mock('./api', () => {
   };
 });
 
-jest.mock('../../../../assets/svg/geolacationIcon', () => {
-  return { __esModule: true, default: () => <div /> };
-});
-
 describe('<City />', () => {
+  beforeEach(() => jest.clearAllMocks());
+
   it('should render modal window', async () => {
     const onCloseCities = jest.fn();
 
