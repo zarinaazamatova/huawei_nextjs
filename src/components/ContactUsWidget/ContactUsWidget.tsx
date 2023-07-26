@@ -19,13 +19,13 @@ export const ContactUsWidget = React.memo(({ options }: ContactUsWidgetProps) =>
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <StyledContainer onClick={toggleWidget}>
+      <StyledContainer>
         {isOpen ? (
-          <OpenedContainer>
+          <OpenedContainer onClick={toggleWidget}>
             <XIcon width="60px" height="60px" fill="#fe5000" />
           </OpenedContainer>
         ) : (
-          <ClosedContainer id="widget">
+          <ClosedContainer onClick={toggleWidget}>
             <SocialButton width="50px" height="50px" fill="white" stroke="#fe5000" />
           </ClosedContainer>
         )}
