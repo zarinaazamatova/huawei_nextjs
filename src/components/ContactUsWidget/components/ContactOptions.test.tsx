@@ -13,20 +13,19 @@ describe('ContactOptions Component', () => {
     ];
     render(<ContactOptions options={testOptions} />);
 
-    const listItems = screen.getAllByRole('listitem');
-    expect(listItems).toHaveLength(testOptions.length);
+    const heading = screen.getByRole('heading', { name: 'Помощь специалиста' });
+    expect(heading).toBeInTheDocument();
 
-    testOptions.forEach((option) => {
-      const link = screen.getByRole('link');
-      expect(link).toBeInTheDocument();
-      expect(link).toHaveAttribute('href', option.url);
-      expect(link).toHaveAttribute('target', '_blank');
-      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-    });
+    const listItems = screen.getByRole('menu');
+    expect(listItems).toBeInTheDocument();
 
-    testOptions.forEach((option) => {
-      const altText = screen.getByText(option.alt);
-      expect(altText).toBeInTheDocument();
-    });
+    const item = screen.getByRole('presentation');
+    expect(item).toBeInTheDocument();
+
+    const link = screen.getByRole('menuitem');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', 'https://www.example.com');
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 });

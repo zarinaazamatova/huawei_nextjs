@@ -10,10 +10,10 @@ type ContactUsWidgetProps = {
   options: ContactOption[];
 };
 
-export const ContactUsWidget = ({ options }: ContactUsWidgetProps) => {
+export const ContactUsWidget = React.memo(({ options }: ContactUsWidgetProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleWidget = () => {
+  const toggleWidget = (): void => {
     setIsOpen((prevState) => !prevState);
   };
 
@@ -25,7 +25,7 @@ export const ContactUsWidget = ({ options }: ContactUsWidgetProps) => {
             <XIcon width="60px" height="60px" fill="#fe5000" />
           </OpenedContainer>
         ) : (
-          <ClosedContainer>
+          <ClosedContainer id="widget">
             <SocialButton width="50px" height="50px" fill="white" stroke="#fe5000" />
           </ClosedContainer>
         )}
@@ -33,5 +33,4 @@ export const ContactUsWidget = ({ options }: ContactUsWidgetProps) => {
       </StyledContainer>
     </ThemeProvider>
   );
-};
-React.memo(ContactUsWidget);
+});

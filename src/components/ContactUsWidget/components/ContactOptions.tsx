@@ -15,10 +15,10 @@ export const ContactOptions = ({ options }: ContactOptionsProps): JSX.Element =>
   return (
     <StyledContainer>
       <StyledHeader>Помощь специалиста</StyledHeader>
-      <ul>
+      <ul id="menu" role="menu">
         {options.map(({ id, url, name, alt }) => (
-          <SttyledList key={id}>
-            <StyledLink href={url} target="_blank" rel="noopener noreferrer">
+          <SttyledList key={id} role="presentation">
+            <StyledLink role="menuitem" href={url} target="_blank" rel="noopener noreferrer">
               <StyledImage>{name}</StyledImage>
               <span>{alt}</span>
             </StyledLink>
