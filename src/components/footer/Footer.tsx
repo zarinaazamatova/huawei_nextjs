@@ -39,7 +39,7 @@ const iconList = [
     url: 'https://www.youtube.com/channel/UCduvxcmOQFwTewukh9DUpvQ',
   },
   { name: <TelegramIcon width="16" height="15" fill="white" />, url: 'https://t.me/zoo_4lapy' },
-  { name: <VKIcon width="18" height="12" fill="white" />, url: 'https://vk.com/4lapy_ru' },
+  { name: <VKIcon width="18" height="13" fill="white" />, url: 'https://vk.com/4lapy_ru' },
   { name: <OKIcon width="12" height="19" fill="white" />, url: 'https://ok.ru/chetyre.lapy' },
 ];
 
