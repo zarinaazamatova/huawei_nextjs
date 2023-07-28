@@ -10,6 +10,7 @@
     "format": "npx prettier --write .",
     "test": "jest",
     "test:ci": "jest --ci",
+    "test:watch": "jest --watch",
     "prepare": "husky install",
     "tsc": "tsc"
   },
