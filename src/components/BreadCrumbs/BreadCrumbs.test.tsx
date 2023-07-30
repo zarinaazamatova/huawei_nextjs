@@ -1,18 +1,18 @@
 import { render, screen } from '@testing-library/react';
-import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
 import { BreadCrumbs } from './BreadCrumbs';
+import { useBreadCrumbsPath } from './BreadCrumbs.hooks';
 
-jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
+jest.mock('./Breadcrumbs.hooks', () => ({
+  useBreadCrumbsPath: jest.fn(),
 }));
 
 jest.mock('../../../public/assets/svg', () => ({
   ArrowIcon: () => null,
 }));
 
-jest.mock('./BreadCrumbsData', () => ({
+jest.mock('./BreadCrumbs.constants', () => ({
   breadCrumbsData: {
     '/': 'Home',
     '/parent': 'Parent',
@@ -23,9 +23,7 @@ jest.mock('./BreadCrumbsData', () => ({
 
 describe('Breadcrumbs', () => {
   it('should render links with correct path segments', () => {
-    (useRouter as jest.Mock).mockReturnValue({
-      pathname: '/parent/child/grandchild',
-    });
+    (useBreadCrumbsPath as jest.Mock).mockReturnValue(['/', '/parent', '/parent/child']);
 
     render(
       <ThemeProvider theme={defaultTheme}>
