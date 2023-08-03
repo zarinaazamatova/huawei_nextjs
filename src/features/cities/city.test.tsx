@@ -5,7 +5,7 @@ import defaultTheme from '../../styles/theme';
 import { Modal } from './city';
 
 describe('<Modal />', () => {
-  it('should render modal window', async () => {
+  it('should render modal window', () => {
     const onClose = jest.fn();
     const onOpenCities = jest.fn();
 

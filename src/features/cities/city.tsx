@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { getCookie } from 'cookies-next';
 import * as S from './city.styles';
 
@@ -8,8 +8,9 @@ type ModalWindowProps = {
   onOpenCities: () => void;
 };
 
-export const Modal: React.FC<ModalWindowProps> = ({ isOpen, onClose, onOpenCities }) => {
+export const Modal = ({ isOpen, onClose, onOpenCities }: ModalWindowProps): ReactElement | null => {
   const city = getCookie('city') ?? 'Москва';
+
   if (!isOpen) return null;
 
   return (

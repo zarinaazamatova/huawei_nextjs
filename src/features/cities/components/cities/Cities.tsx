@@ -1,8 +1,8 @@
-import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useRef, useState, useEffect, useMemo, useCallback, ReactElement } from 'react';
 import { setCookie } from 'cookies-next';
 import * as S from './Cities.styles';
 import { fetchCities } from './api';
-import { useOutsideClick } from './Cities.hook';
+import { useOutsideClick } from './Cities.hooks';
 import { CitiesItem } from './Cities.types';
 import { GeolocationIcon } from '../../../../assets/svg/geolacationIcon';
 
@@ -11,8 +11,12 @@ type TabComponentProps = {
   onCloseCities: () => void;
 };
 
-export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCities }) => {
-  const [activeTab, setActiveTab] = useState('moscowMO');
+enum GroupOfCitties {
+  BigCitites = 'bigCities',
+  MoscowRegion = 'moscowMO',
+}
+export const Cities = ({ isOpenCities, onCloseCities }: TabComponentProps): ReactElement | null => {
+  const [activeTab, setActiveTab] = useState(GroupOfCitties.MoscowRegion);
   const [cities, setCities] = useState<CitiesItem[]>([]);
   const [myCity, setMyCity] = useState('');
 
@@ -37,8 +41,8 @@ export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCitie
     [onCloseCities],
   );
 
-  const allCities = useMemo(() => {
-    return cities.map(({ id, name }) => (
+  const citiesList = useMemo(() => {
+    return cities.map(({ id, name }: CitiesItem) => (
       <S.StyledWithIcon key={id} onClick={() => handleCityClick(name)}>
         <GeolocationIcon width={30} height={35} />
         <div className={`my-city ${myCity === name ? 'active' : ''}`}>{name}</div>
@@ -47,7 +51,9 @@ export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCitie
   }, [cities, handleCityClick, myCity]);
 
   const modalRef = useRef<HTMLDivElement>(null);
+
   useOutsideClick(modalRef, onCloseCities);
+
   if (!isOpenCities) return null;
 
   return (
@@ -55,22 +61,21 @@ export const Cities: React.FC<TabComponentProps> = ({ isOpenCities, onCloseCitie
       <S.StyledModal className="modal" ref={modalRef}>
         <div>
           {/* here will be a Form(input)  */}
-          <S.StyledGroupOfCitites onClick={() => setActiveTab('moscowMO')}>
-            <div className={`tab ${activeTab === 'moscowMO' ? 'active' : ''}`}>Москва и МО</div>
+          <S.StyledGroupOfCitites onClick={() => setActiveTab(GroupOfCitties.MoscowRegion)}>
+            <div className={`tab ${activeTab === GroupOfCitties.MoscowRegion ? 'active' : ''}`}>
+              Москва и МО
+            </div>
           </S.StyledGroupOfCitites>
-          <S.StyledGroupOfCitites onClick={() => setActiveTab('bigCities')}>
-            <div className={`tab ${activeTab === 'bigCities' ? 'active' : ''}`}>Большие города</div>
+          <S.StyledGroupOfCitites onClick={() => setActiveTab(GroupOfCitties.BigCitites)}>
+            <div className={`tab ${activeTab === GroupOfCitties.BigCitites ? 'active' : ''}`}>
+              Большие города
+            </div>
           </S.StyledGroupOfCitites>
         </div>
         <div>
-          <S.StyledCitiesBlock>{allCities}</S.StyledCitiesBlock>
+          <S.StyledCitiesBlock>{citiesList}</S.StyledCitiesBlock>
         </div>
       </S.StyledModal>
     </S.StyledModalOverlay>
   );
 };
-
-/* styled.div`
-  ${({ isBold }) => isBold && `font-weight: 700`}
-  isBold = 
-`; */
