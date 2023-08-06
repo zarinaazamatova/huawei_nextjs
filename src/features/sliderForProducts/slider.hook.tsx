@@ -1,5 +1,5 @@
 import React from 'react';
-import { Arrow } from '../../components/Arrow';
+import * as S from './slider.styles';
 
 export const useSliderConfigs = () => {
   const configs = {
@@ -12,17 +12,26 @@ export const useSliderConfigs = () => {
     adaptiveHeight: true,
     autoplay: false,
     autoplaySpeed: 2000,
-    nextArrow: <Arrow arrowType="nextArrow" />,
-    prevArrow: <Arrow arrowType="prevArrow" />,
-    ResponsiveObject: [
+    prevArrow: <S.StyledIconLeft />,
+    nextArrow: <S.StyledIconRight />,
+    responsive: [
       {
         breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
       },
     ],
   };

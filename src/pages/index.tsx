@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { GetServerSideProps } from 'next';
 import { productsData, ProductType } from '@/productsData';
 import { Layout } from '@/components/Layout';
@@ -10,7 +10,7 @@ type MyProducts = {
   products: ProductType[];
 };
 
-const Home: React.FC<MyProducts> = ({ products }) => {
+const Home = ({ products }: MyProducts): ReactElement => {
   return (
     <Layout>
       <div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Image from 'next/image';
 import { ProductType } from '@/productsData';
 import cart from '../../assets/cart.png';
@@ -8,7 +8,7 @@ type MyProducts = {
   product: ProductType;
 };
 
-export const Card: React.FC<MyProducts> = ({ product }) => {
+export const Card = ({ product }: MyProducts): ReactElement => {
   return (
     <div>
       <S.StyledContainer>

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { ProductType } from '@/productsData';
-import { Card } from '@/components/Card/Card';
+import { Card } from '../../components/Card';
 import * as S from './slider.styles';
 import { useSliderConfigs } from './slider.hook';
 
@@ -8,20 +8,19 @@ type MyProducts = {
   products: ProductType[];
 };
 
-export const Slider: React.FC<MyProducts> = ({ products }) => {
-  const configs = useSliderConfigs();
+export const Slider = ({ products }: MyProducts): ReactElement => {
+  const settings = useSliderConfigs();
 
   return (
-    <div>
+    <S.StyledContainer>
       <S.StyledTitle>Самые востребованные товары</S.StyledTitle>
-
-      <S.StyledWrapper {...configs}>
+      <S.StyledWrapper {...settings}>
         {products.map((product) => (
           <div>
             <Card product={product} />
           </div>
         ))}
       </S.StyledWrapper>
-    </div>
+    </S.StyledContainer>
   );
 };
