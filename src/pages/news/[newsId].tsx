@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths, NextPage, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
 import newsData from '../../mocks/news/news.json';
-import { NewsProps } from './SingleNews.types';
+import { NewsProps } from '../../components/SingleNews/SingleNews.types';
 import { Header } from '../../components/Header';
 import {
   StyledContainer,
@@ -9,7 +9,7 @@ import {
   StyledHeading,
   StyledDate,
   StyledParagraph,
-} from './SingleNews.style';
+} from '../../components/SingleNews/SingleNews.style';
 
 const SingleNewsPage: NextPage<{ news: NewsProps[] }> = ({
   news,
