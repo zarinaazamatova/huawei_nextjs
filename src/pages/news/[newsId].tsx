@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths, NextPage, InferGetStaticPropsType } from 'next';
+import Image from 'next/image';
 import newsData from '../../mocks/news/news.json';
 import { NewsProps } from './SingleNews.types';
 import { Header } from '../../components/Header';
@@ -22,7 +23,7 @@ const SingleNewsPage: NextPage<{ news: NewsProps[] }> = ({
             <StyledBox key={singleNews.id}>
               <StyledHeading>{singleNews.title}</StyledHeading>
               <StyledDate>{singleNews.date}</StyledDate>
-              <img src={singleNews.img} alt={singleNews.category} />
+              <Image src={singleNews.img} alt={singleNews.category} width={700} height={700} />
               <StyledParagraph>{singleNews.desc}</StyledParagraph>
             </StyledBox>
           );
