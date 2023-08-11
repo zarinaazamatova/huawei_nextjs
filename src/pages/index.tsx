@@ -4,13 +4,13 @@ import { productsData, ProductType } from '@/productsData';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
 import { SimpleSlider } from '@/components/SimpleSlider';
-import { Slider } from '@/features/sliderForProducts';
+import { Slider } from '@/features/productsSlider';
 
-type MyProducts = {
+type SliderProps = {
   products: ProductType[];
 };
 
-const Home = ({ products }: MyProducts): ReactElement => {
+const Home = ({ products }: SliderProps): ReactElement => {
   return (
     <Layout>
       <div>
@@ -24,7 +24,7 @@ const Home = ({ products }: MyProducts): ReactElement => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<MyProducts> = async () => {
+export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
   try {
     const products = productsData;
     return {
@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<MyProducts> = async () => {
       },
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return {
       props: {
         products: [],

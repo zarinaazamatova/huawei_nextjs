@@ -3,16 +3,16 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { ProductType } from '../../productsData';
 import defaultTheme from '../../styles/theme';
-import { Slider } from './slider';
+import { Slider } from './productsSlider';
 
 jest.mock('react-slick', () => ({
   default: () => {
-    return <div> </div>;
+    return <div />;
   },
   __esModule: true,
 }));
 
-jest.mock('./slider', () => ({
+jest.mock('./productsSlider', () => ({
   Slider: ({ products }: { products: ProductType[] }) => (
     <div>
       {products.map((product) => (
@@ -45,7 +45,7 @@ const mockProducts: ProductType[] = [
   },
 ];
 
-describe('Slider component', () => {
+describe('Slider', () => {
   it('renders the Slider component with products', () => {
     render(
       <ThemeProvider theme={defaultTheme}>

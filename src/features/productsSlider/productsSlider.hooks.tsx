@@ -1,7 +1,27 @@
-import React from 'react';
-import * as S from './slider.styles';
+import React, { ReactElement } from 'react';
+import * as S from './productsSlider.styles';
 
-export const useSliderConfigs = () => {
+type SlickSliderProps = {
+  dots: boolean;
+  arrow: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  adaptiveHeight: boolean;
+  autoplay: boolean;
+  autoplaySpeed: number;
+  prevArrow: ReactElement;
+  nextArrow: ReactElement;
+  responsive: {
+    breakpoint: number;
+    settings: {
+      slidesToShow: number;
+    };
+  }[];
+};
+
+export const useSliderConfigs = (): SlickSliderProps => {
   const configs = {
     dots: false,
     arrow: true,

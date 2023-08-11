@@ -1,14 +1,14 @@
 import React, { ReactElement } from 'react';
 import { ProductType } from '@/productsData';
 import { Card } from '../../components/Card';
-import * as S from './slider.styles';
-import { useSliderConfigs } from './slider.hook';
+import * as S from './productsSlider.styles';
+import { useSliderConfigs } from './productsSlider.hooks';
 
-type MyProducts = {
+type SliderProps = {
   products: ProductType[];
 };
 
-export const Slider = ({ products }: MyProducts): ReactElement => {
+export const Slider = ({ products }: SliderProps): ReactElement => {
   const settings = useSliderConfigs();
 
   return (
@@ -16,9 +16,7 @@ export const Slider = ({ products }: MyProducts): ReactElement => {
       <S.StyledTitle>Самые востребованные товары</S.StyledTitle>
       <S.StyledWrapper {...settings}>
         {products.map((product) => (
-          <div>
-            <Card product={product} />
-          </div>
+          <Card product={product} />
         ))}
       </S.StyledWrapper>
     </S.StyledContainer>

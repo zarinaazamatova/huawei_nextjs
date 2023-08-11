@@ -36,5 +36,3 @@ next-env.d.ts
 
 .vscode
 .idea
-
-Fetch Data with getServerSideProps

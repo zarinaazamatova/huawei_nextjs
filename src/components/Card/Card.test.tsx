@@ -10,7 +10,7 @@ jest.mock('../../assets/cart.png', () => {
 });
 
 jest.mock('next/image', () => {
-  return { __esModule: true, default: () => <div> </div> };
+  return { __esModule: true, default: () => <div /> };
 });
 
 const mockProducts: ProductType[] = [
