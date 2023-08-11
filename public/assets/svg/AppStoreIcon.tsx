@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 type AppStoreIconProps = {
   width: string;
   height: string;

@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 type TelegramIconProps = {
   width: string;
   height: string;
