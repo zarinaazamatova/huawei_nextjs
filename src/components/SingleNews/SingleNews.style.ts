@@ -24,7 +24,7 @@ export const StyledBox = styled.div`
 
 export const StyledHeading = styled.h1`{
  ${({ theme }) => css`
-   margin-top: 80px;
+   margin-top: 160px;
    font-family: 'Roboto', sans-serif;
    font-size: ${theme.fontSizes.xxl};
    color: ${theme.textColors.primary};
@@ -36,6 +36,13 @@ export const StyledDate = styled.h6`{
    font-size: ${theme.fontSizes.md};
    color: ${theme.textColors.lightGrey};
  `}`;
+
+export const StyledImage = styled.img`
+   {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 export const StyledParagraph = styled.p`{
  ${({ theme }) => css`

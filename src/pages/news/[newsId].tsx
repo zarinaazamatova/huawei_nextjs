@@ -1,53 +1,42 @@
 import { GetStaticProps, GetStaticPaths, NextPage, InferGetStaticPropsType } from 'next';
-import Image from 'next/image';
 import newsData from '../../mocks/news/news.json';
-import { NewsProps } from '../../components/SingleNews/SingleNews.types';
 import { Header } from '../../components/Header';
-import {
-  StyledContainer,
-  StyledBox,
-  StyledHeading,
-  StyledDate,
-  StyledParagraph,
-} from '../../components/SingleNews/SingleNews.style';
+import { SingleNews } from '../../components/SingleNews';
+import { SingleNewsPageProps } from '../../components/SingleNews/SingleNews.types';
+import { News } from '../../types';
+import { Footer } from '../../components/footer';
+import { copyRightList, footerNavData } from '../../footerData';
 
-const SingleNewsPage: NextPage<{ news: NewsProps[] }> = ({
-  news,
+const SingleNewsPage: NextPage<SingleNewsPageProps> = ({
+  singleNews,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Header />
-      <StyledContainer>
-        {news.map((singleNews: any) => {
-          return (
-            <StyledBox key={singleNews.id}>
-              <StyledHeading>{singleNews.title}</StyledHeading>
-              <StyledDate>{singleNews.date}</StyledDate>
-              <Image src={singleNews.img} alt={singleNews.category} width={700} height={700} />
-              <StyledParagraph>{singleNews.desc}</StyledParagraph>
-            </StyledBox>
-          );
-        })}
-      </StyledContainer>
+      <SingleNews {...singleNews} />
+      <Footer footerNavData={footerNavData} copyRightList={copyRightList} />
     </>
   );
 };
 
 export default SingleNewsPage;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<SingleNewsPageProps> = async (context) => {
   const { params } = context;
   const newsId = params?.newsId;
-  const newsItem = newsData.find((news: any) => news.id === Number(newsId));
+
+  const newsItem = newsData.find((news: News) => news.id === Number(newsId));
+
+  const props: SingleNewsPageProps = {
+    singleNews: newsItem ?? ({} as News),
+  };
   return {
-    props: {
-      news: newsItem ? [newsItem] : [],
-    },
+    props,
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = newsData.map((singleNews: any) => {
+  const paths = newsData.map((singleNews: News) => {
     return {
       params: {
         newsId: `${singleNews.id}`,
