@@ -13,7 +13,7 @@ describe('SingleNews component', () => {
     img: 'sample.jpg',
   };
 
-  it('renders news item correctly', async () => {
+  it('renders news item correctly', () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <SingleNews {...newsItem} />
@@ -25,8 +25,6 @@ describe('SingleNews component', () => {
     });
     expect(screen.getByText('News')).toBeInTheDocument();
     expect(screen.getByText('2023-07-22')).toBeInTheDocument();
-    expect(
-      await screen.findByText('This is a sample of the news description.'),
-    ).toBeInTheDocument();
+    expect(screen.getByText('This is a sample of the news description.')).toBeInTheDocument();
   });
 });
