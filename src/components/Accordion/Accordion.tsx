@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useState } from 'react';
+import * as S from './Accordion.styled';
 
-interface AccordionProps {
-  sections: {
-    id: number;
-    title: string;
-    description: string;
-    content: string;
-  }[];
-}
+type BenefitsProps = {
+  id: number;
+  icon: ReactElement;
+  title: string;
+  description: string;
+  content: ReactElement;
+};
+
+type AccordionProps = {
+  sections: BenefitsProps[];
+};
+
 export const Accordion = ({ sections }: AccordionProps) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -18,13 +23,19 @@ export const Accordion = ({ sections }: AccordionProps) => {
   return (
     <div>
       {sections.map((section, index) => (
-        <div key={section.id}>
-          <div>{section.description}</div>
-          <button type="button" onClick={() => handleSectionClick(index)}>
-            {section.title}
-          </button>
-          {activeIndex === index && <p>{section.content}</p>}
-        </div>
+        <S.StyledSections>
+          <S.StyledHeader>
+            {section.icon}
+            <div key={section.id}>
+              <S.StyledTitle>{section.title}</S.StyledTitle>
+            </div>
+          </S.StyledHeader>
+          <S.StyledButton type="button" onClick={() => handleSectionClick(index)}>
+            {section.description}
+            <S.StyledIcon />
+          </S.StyledButton>
+          <S.StyledContent>{activeIndex === index && <p>{section.content}</p>}</S.StyledContent>
+        </S.StyledSections>
       ))}
     </div>
   );

@@ -45,7 +45,7 @@ const defaultTheme = {
   },
   textColors: {
     primary: '#1d364b',
-    secondary: '#8da2b5',
+    secondary: '#637280',
     accent: '#da291c',
     orange: '#fe5000',
     white: '#ffffff',
