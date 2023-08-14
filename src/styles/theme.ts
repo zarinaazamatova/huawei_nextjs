@@ -32,6 +32,7 @@ const defaultTheme = {
   fontWeights: {
     light: 300,
     normal: 400,
+    medium: 600,
     bold: 700,
   },
   backgroundColors: {
@@ -41,6 +42,7 @@ const defaultTheme = {
     accent: '#da291c',
     green: '#0a8449',
     orange: '#fe5000',
+    modalBg: '#4d5c74d9',
     blue: '#00afff',
   },
   textColors: {
