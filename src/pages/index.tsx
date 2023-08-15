@@ -4,7 +4,7 @@ import { productsData, ProductType } from '@/productsData';
 import { Layout } from '@/components/Layout';
 import { News } from '@/components/News';
 import { SimpleSlider } from '@/components/SimpleSlider';
-import { Slider } from '@/features/productsSlider';
+import { ProductSlider } from '@/features/productsSlider';
 
 type SliderProps = {
   products: ProductType[];
@@ -14,7 +14,7 @@ const Home = ({ products }: SliderProps): ReactElement => {
   return (
     <Layout>
       <div>
-        <Slider products={products} />
+        <ProductSlider products={products} />
         <News />
         <SimpleSlider />
       </div>

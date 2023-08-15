@@ -4,11 +4,11 @@ import { Card } from '../../components/Card';
 import * as S from './productsSlider.styles';
 import { useSliderConfigs } from './productsSlider.hooks';
 
-type SliderProps = {
+type SliderType = {
   products: ProductType[];
 };
 
-export const Slider = ({ products }: SliderProps): ReactElement => {
+export const ProductSlider = ({ products }: SliderType): ReactElement => {
   const settings = useSliderConfigs();
 
   return (

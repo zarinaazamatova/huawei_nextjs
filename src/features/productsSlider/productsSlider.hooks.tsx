@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import * as S from './productsSlider.styles';
 
-type SlickSliderProps = {
+type SlickSliderConfigType = {
   dots: boolean;
   arrow: boolean;
   infinite: boolean;
@@ -21,7 +21,7 @@ type SlickSliderProps = {
   }[];
 };
 
-export const useSliderConfigs = (): SlickSliderProps => {
+export const useSliderConfigs = (): SlickSliderConfigType => {
   const configs = {
     dots: false,
     arrow: true,
