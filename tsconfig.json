@@ -36,7 +36,9 @@
     "**/*.tsx",
     "../.next/types/**/*.ts",
     "../huawei_nextjs/types.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/**/*.tsx", 
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"

@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+
 type TikTokIconProps = {
   width: string;
   height: string;
