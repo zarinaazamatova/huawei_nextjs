@@ -4,7 +4,7 @@ import defaultTheme from '../../styles/theme';
 import { BreadCrumbs } from './BreadCrumbs';
 import { useBreadCrumbsPath } from './BreadCrumbs.hooks';
 
-jest.mock('./Breadcrumbs.hooks', () => ({
+jest.mock('./BreadCrumbs.hooks', () => ({
   useBreadCrumbsPath: jest.fn(),
 }));
 
