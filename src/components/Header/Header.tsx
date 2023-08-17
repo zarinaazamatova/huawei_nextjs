@@ -21,7 +21,7 @@ export const Header = () => {
       <S.StyledHeaderCenter>
         <Image src={logo} alt="logo" className="icon-logo" width={224} />
         <Catalog />
-        {/* here will be a Form(input) from Asel */}
+        {/* here will be a Form(input)  */}
         <S.StyledUserInfo>
           <UserInfo
             url=""
