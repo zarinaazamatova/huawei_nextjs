@@ -12,9 +12,8 @@ const baseQueryWithInterception = async (url: string) => {
     const response = await axiosBaseQuery(url);
     if (response.status >= 200 && response.status < 300) {
       return { data: response.data };
-    } else {
-      throw new Error(`Request failed with status ${response.status}`);
     }
+    throw new Error(`Request failed with status ${response.status}`);
   } catch (error) {
     return { error };
   }
@@ -28,4 +27,5 @@ export const apiService = createApi({
     }),
   }),
 });
+
 export const { useGetPostsQuery } = apiService;
