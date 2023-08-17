@@ -27,4 +27,5 @@ export const apiService = createApi({
     }),
   }),
 });
+
 export const { useGetPostsQuery } = apiService;
