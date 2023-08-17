@@ -38,7 +38,8 @@
         "props": true,
         "ignorePropertyModificationsFor": ["state", "ctx"]
       }
-    ]
+    ],
+    "react/no-array-index-key": "off"
   },
   "ignorePatterns": ["next.config.js"]
 }
