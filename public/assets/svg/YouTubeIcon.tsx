@@ -1,11 +1,11 @@
-import { JSX } from 'react';
+import { ReactElement } from 'react';
 
 type YouTubeIconProps = {
   width: string;
   height: string;
   fill: string;
 };
-export const YouTubeIcon = ({ width, height, fill }: YouTubeIconProps): JSX.Element => {
+export const YouTubeIcon = ({ width, height, fill }: YouTubeIconProps): ReactElement => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -6,3 +6,5 @@ export * from './OKIcon';
 export * from './AppStoreIcon';
 export * from './GooglePlayIcon';
 export * from './CheckMarkIcon';
+export * from './SocialButton';
+export * from './XIcon';
