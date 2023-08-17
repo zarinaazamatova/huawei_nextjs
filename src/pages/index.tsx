@@ -1,6 +1,10 @@
-import { Layout } from '../components/Layout';
-import { News } from '../components/News';
-import { SimpleSlider } from '../components/SimpleSlider';
+import React, { ReactElement } from 'react';
+import { GetServerSideProps } from 'next';
+import { productsData, ProductType } from '@/productsData';
+import { Layout } from '@/components/Layout';
+import { News } from '@/components/News';
+import { SimpleSlider } from '@/components/SimpleSlider';
+import { ProductSlider } from '@/features/productsSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
 
@@ -37,10 +41,15 @@ const contactOptions = [
   },
 ];
 
-const Home = () => {
+type SliderProps = {
+  products: ProductType[];
+};
+
+const Home = ({ products }: SliderProps): ReactElement => {
   return (
     <Layout>
       <div>
+        <ProductSlider products={products} />
         <News />
         <SimpleSlider />
         <ContactUsWidget options={contactOptions} />
@@ -50,3 +59,21 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
+  try {
+    const products = productsData;
+    return {
+      props: {
+        products,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
+};
