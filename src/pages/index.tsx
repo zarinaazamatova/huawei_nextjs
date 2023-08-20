@@ -1,5 +1,5 @@
-import { Layout } from '../components/Layout';
-import { Benefits } from '@/components/Layout/Benefits';
+import { Layout } from '../Layout';
+import { Benefits } from '../Layout/Benefits';
 import { News } from '../components/News';
 import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';

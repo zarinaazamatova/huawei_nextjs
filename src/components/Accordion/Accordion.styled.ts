@@ -14,7 +14,7 @@ export const StyledButton = styled.button`
 
 export const StyledContent = styled.div`
   margin-left: 50px;
-  width: 1000px;
+  width: 100%;
   text-align: justify;
 `;
 

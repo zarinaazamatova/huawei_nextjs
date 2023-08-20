@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../styles/theme';
 import { Accordion } from './Accordion';
@@ -30,19 +31,23 @@ describe('Accordion', () => {
     );
   });
 
-  it('correct opening and closing of sections', () => {
-    const { getByText, queryByText } = render(<Accordion sections={mockSections} />);
+  it('should correct opening and closing of sections', async () => {
+    const { getByText, queryByText } = render(
+      <ThemeProvider theme={defaultTheme}>
+        <Accordion sections={mockSections} />
+      </ThemeProvider>,
+    );
 
-    fireEvent.click(getByText('Title 1'));
-    expect(queryByText('Content 1')).toBeInTheDocument();
+    await userEvent.click(getByText('Title 1'));
+    expect(getByText('Content 1')).toBeInTheDocument();
 
-    fireEvent.click(getByText('Title 1'));
-    expect(queryByText('Content 2')).not.toBeInTheDocument();
+    await userEvent.click(getByText('Title 1'));
+    expect(queryByText('Content 2')).toBeNull();
 
-    fireEvent.click(getByText('Title 2'));
-    expect(queryByText('Content 2')).toBeInTheDocument();
+    await userEvent.click(getByText('Title 2'));
+    expect(getByText('Content 2')).toBeInTheDocument();
 
-    fireEvent.click(getByText('Title 2'));
-    expect(queryByText('Content 1')).not.toBeInTheDocument();
+    await userEvent.click(getByText('Title 2'));
+    expect(queryByText('Content 1')).toBeNull();
   });
 });

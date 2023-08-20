@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Accordion } from '../../Accordion';
+import { Accordion } from '../../components/Accordion';
 import * as S from './Benefits.styles';
 
 export const Benefits = (): ReactElement => {
