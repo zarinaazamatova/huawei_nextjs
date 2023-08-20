@@ -1,0 +1,386 @@
+[
+  {
+    "id": 1,
+    "title": "День города Липецк вместе с Четыре Лапы",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/3cf/3cf28003e10aaa3002238869979e7de3.jpg",
+    "desc": "`abc`"
+  },
+  {
+    "id": 2,
+    "title": "Вопрос-ответ: встреча с ветеринарным экспертом Четыре Лапы",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/877/8770198b74f736c6b6ef06aad673418c.jpg",
+    "desc": "`abc `"
+  },
+  {
+    "id": 3,
+    "title": "Приглашаем на благотворительную ярмарку «Город неравнодушных»",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/533/5332850376fc29e7194874fa9a21858d.jpg",
+    "desc": "`abc`"
+  },
+  {
+    "id": 4,
+    "title": "Выездной прием врача-онколога",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/5c5/5c5cc3811ef722ebbca04e7b5014c13e.jpg",
+    "desc": "`abc `"
+  },
+  {
+    "id": 5,
+    "title": "Приглашаем на выставку-пристройство благотворительного фонда «ДОГОНИКОТА-ФЕСТ»",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/e8c/e8cf73d5ab016b586b01ce6487e61589.jpg",
+    "desc": "`abc`"
+  },
+  {
+    "id": 6,
+    "title": "Приглашаем на вебинар «Почему «плачут» глазки»",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/20e/20ed2969c28e4ca1c536f1182a664496.jpg",
+    "desc": "`abc `"
+  },
+  {
+    "id": 7,
+    "title": "Вакцина «Эурикан» в наличии!",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/851/851d5610a853e335b7147a003b1bed0f.jpg",
+    "desc": "`abc`"
+  },
+  {
+    "id": 8,
+    "title": "Пополнение в компании Четыре Лапы!",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/b90/b9077818db4e4dddd60e621184d21c58.jpg",
+    "desc": "`abc `"
+  },
+  {
+    "id": 9,
+    "title": "Бесплатный пункт мобильного груминга и ветеринарии Четыре Лапы снова начинает свою работу",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/2eb/2ebe982681767e117f07abd7713c47ce.jpg",
+    "desc": "`abc`"
+  },
+  {
+    "id": 10,
+    "title": "Приглашаем на пет-экскурсию “Усадьба Быково”",
+    "category": "event",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/8a0/8a0f456f3b2b21332f12efdd74163e16.jpg",
+    "desc": "`abc `"
+  },
+  {
+    "id": 11,
+    "title": "Очень прекрасное событие в очень длинном и нудном тексте",
+    "category": "news",
+    "date": "01-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/0e7/0e7b4c1c0a2d38276495e868d4071f48.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 12,
+    "title": "Новый ветеринарный центр в городе",
+    "category": "news",
+    "date": "01-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/c75/c75f7dc22a836098ef90b80e0342974b.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 13,
+    "title": "Открытие собачьего парка",
+    "category": "news",
+    "date": "01-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/746/746a978b8eb1009b871a2d0b74a9c83b.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 14,
+    "title": "Поступление новых премиальных кормов",
+    "category": "news",
+    "date": "01-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/cb8/cb84a41dd8a42c1aa80b27d1e55e8c95.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 15,
+    "title": "Выставка редких пород",
+    "category": "news",
+    "date": "01-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/bbe/bbe5db513fe49a5e7771f2170046473c.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 16,
+    "title": "Тот самый день",
+    "category": "news",
+    "date": "02-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/1e2/1e2a29b4ec9f046fef56d73dcdc8db6d.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 17,
+    "title": "Скидки на аксессуары для питомцев",
+    "category": "news",
+    "date": "02-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/bfd/bfd647f628cf1cfb570522c4b60ca459.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 18,
+    "title": "Бесплатное посещение ветеринара",
+    "category": "news",
+    "date": "02-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/741/7419ad2de0c465944b032529fc69e259.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 19,
+    "title": "Акция приютам",
+    "category": "news",
+    "date": "02-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/573/573369b7fbd60c05e628f979c831ec57.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 20,
+    "title": "Новый кошачий лоток",
+    "category": "news",
+    "date": "03-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/b5f/b5f8e580d9b1f7810b5b0bda872d83f9.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 21,
+    "title": "Собаки и лето",
+    "category": "news",
+    "date": "03-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/4d3/4d3c1a3364a45d13d0bcec145b99344c.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 22,
+    "title": "Международная выставка кошек",
+    "category": "news",
+    "date": "03-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/1bb/1bbcf1233a8c9dd75ef8799a38f365e0.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 23,
+    "title": "Вечер ветеринарной поэзии",
+    "category": "news",
+    "date": "03-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/c65/c65373c6ee9650d223e144dfe1f6cd27.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 24,
+    "title": "Приют ищет волонтёров",
+    "category": "news",
+    "date": "04-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/b96/b96a116650f9df1a4c6b7c3ad156b1ed.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 25,
+    "title": "Собаки на море",
+    "category": "news",
+    "date": "04-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/726/726b00437b033eaf22e51b8ee5a7e114.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 26,
+    "title": "Приют на карте города",
+    "category": "news",
+    "date": "04-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/925/92532a77c4c113888f4a09d9ad786d06.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 27,
+    "title": "Онлайн встреча с кинологом",
+    "category": "news",
+    "date": "04-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/4b7/4b77a11e1fc777987afff781b18d1150.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 28,
+    "title": "Новый образ собак",
+    "category": "news",
+    "date": "05-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/d35/d357b9602b699c3701589548480e4329.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 29,
+    "title": "Корма в приюте",
+    "category": "news",
+    "date": "05-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/71f/71ff5c00cfd27307fc6560f7a1174a85.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 30,
+    "title": "Прививки для ваших питомцев",
+    "category": "news",
+    "date": "05-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/961/961119348a58ab515b6ec3a614002963.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 31,
+    "title": "Собаки и дети",
+    "category": "news",
+    "date": "05-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/11c/11c62d7d5ce4ab9883b8ea0b7a6872d8.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 32,
+    "title": "Онлайн марафон заботы о животных",
+    "category": "news",
+    "date": "06-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/d7d/d7d998e9f89b63cc52f40837894ea9db.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 33,
+    "title": "Как выбрать питомца",
+    "category": "news",
+    "date": "06-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/883/883ab0ea48ac93e74da8f0e7a86d59e6.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 34,
+    "title": "День корма",
+    "category": "news",
+    "date": "06-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/b8f/b8f8f46eeaf3f775a6baf47c02fca174.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 35,
+    "title": "Онлайн-экскурсия в приют",
+    "category": "news",
+    "date": "06-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/042/042d6e4a4638c3e5ef5b4d79ef4f0513.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 36,
+    "title": "Приют ищет волонтёров",
+    "category": "news",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/c33/c33eaff055032622c9b0593b8ff7622a.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 37,
+    "title": "Тренинги для собак",
+    "category": "news",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/9b1/9b130f8c6c1a4864b23a0a9da8b6413c.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 38,
+    "title": "Подарочные карты для владельцев кошек",
+    "category": "news",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/fb1/fb1f31d1fbf51b6ad4e55807d10eab5a.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 39,
+    "title": "Проведение родительских классов",
+    "category": "news",
+    "date": "07-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/a20/a20c05f2c50708dd1dfb7c1e04b3df5b.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 40,
+    "title": "Собака и человек: как выбрать друга",
+    "category": "news",
+    "date": "08-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/c53/c53e9e39abae79b7c58f3663144ff860.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 41,
+    "title": "День кошек",
+    "category": "news",
+    "date": "08-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/7bc/7bc13b58a3ab2cb99b037515b7d2cd18.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 42,
+    "title": "Мастер-класс по изготовлению игрушек для питомцев",
+    "category": "news",
+    "date": "08-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/184/18487d5a4d68195f85368aa7487f66eb.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 43,
+    "title": "Как подготовить питомца к переезду",
+    "category": "news",
+    "date": "08-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/8bc/8bc1c9d8e7872135f6b6149420c3e11a.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 44,
+    "title": "День безумных цен на корма",
+    "category": "news",
+    "date": "09-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/b11/b11c6e2ee463792188c101a7d3a294bb.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 45,
+    "title": "День зоозащитника",
+    "category": "news",
+    "date": "09-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/1e3/1e39fb570f09e8b4b132e744c4c76f86.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 46,
+    "title": "Тренировка с лучшими",
+    "category": "news",
+    "date": "09-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/153/153ca4a2ef2a5b7bdfb7e6ebdd257544.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 47,
+    "title": "Конкурс рисунков для детей",
+    "category": "news",
+    "date": "09-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/8a8/8a8b6ed3a9b2cbce05d960881447b1e9.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  },
+  {
+    "id": 48,
+    "title": "Приют ищет волонтёров",
+    "category": "news",
+    "date": "10-07-2023",
+    "img": "https://4lapy.ru/crop/610x280/upload/iblock/240/2406e25979a0e4b9944f893d6dfb0cb5.jpg",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+  }
+]

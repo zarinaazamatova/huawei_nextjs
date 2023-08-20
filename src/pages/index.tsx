@@ -1,3 +1,7 @@
+import React, { ReactElement } from 'react';
+import { GetServerSideProps } from 'next';
+import { productsData, ProductType } from '@/productsData';
+import { ProductSlider } from '@/features/productsSlider';
 import { Layout } from '../Layout';
 import { Benefits } from '../Layout/Benefits';
 import { News } from '../components/News';
@@ -38,10 +42,15 @@ const contactOptions = [
   },
 ];
 
-const Home = () => {
+type SliderProps = {
+  products: ProductType[];
+};
+
+const Home = ({ products }: SliderProps): ReactElement => {
   return (
     <Layout>
       <div>
+        <ProductSlider products={products} />
         <News />
         <SimpleSlider />
         <Benefits />
@@ -52,3 +61,21 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
+  try {
+    const products = productsData;
+    return {
+      props: {
+        products,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        products: [],
+      },
+    };
+  }
+};
