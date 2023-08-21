@@ -2,6 +2,7 @@ import { Layout } from '../components/Layout';
 import { News } from '../components/News';
 import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
+import { GoogleMapComponent } from '../components/GoogleMapComponent';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
 
 const contactOptions = [
@@ -43,6 +44,7 @@ const Home = () => {
       <div>
         <News />
         <SimpleSlider />
+        <GoogleMapComponent />
         <ContactUsWidget options={contactOptions} />
       </div>
     </Layout>
