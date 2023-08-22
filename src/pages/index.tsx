@@ -1,10 +1,11 @@
 import React, { ReactElement } from 'react';
 import { GetServerSideProps } from 'next';
 import { productsData, ProductType } from '@/productsData';
-import { Layout } from '@/components/Layout';
-import { News } from '@/components/News';
-import { SimpleSlider } from '@/components/SimpleSlider';
 import { ProductSlider } from '@/features/productsSlider';
+import { Layout } from '../Layout';
+import { Benefits } from '../Layout/Benefits';
+import { News } from '../components/News';
+import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
 
@@ -52,6 +53,7 @@ const Home = ({ products }: SliderProps): ReactElement => {
         <ProductSlider products={products} />
         <News />
         <SimpleSlider />
+        <Benefits />
         <ContactUsWidget options={contactOptions} />
       </div>
     </Layout>
