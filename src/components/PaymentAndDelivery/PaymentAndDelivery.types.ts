@@ -18,3 +18,14 @@ export type PaymentOption = {
   images?: PaymentImage[];
   url?: PaymentUrl;
 };
+export type DeliveryOption = {
+  type: string;
+  description: {
+    price: string | number;
+    options: string[];
+  };
+  delivery: string;
+  deliveryDays: string;
+  deliveryTime: string[];
+  assortment: string;
+};

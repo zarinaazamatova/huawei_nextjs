@@ -6,7 +6,7 @@ export const StyledPaymentAndDeliveryContainer = styled.div`
   margin: 150px auto;
   font-size: ${({ theme }) => theme.fontSizes.sm};
 `;
-export const StyledDeliveryContainer = styled.div`
+export const StyledMapContainer = styled.div`
   margin-top: 30px;
 `;
 export const StyledOptionsContainer = styled.div`
@@ -19,7 +19,6 @@ export const StyledPaymentOptionsList = styled.ul`
 export const StyledPaymentRow = styled.li`
   margin-bottom: 20px;
   display: flex;
-
   a {
     color: ${({ theme }) => theme.textColors.orange};
     display: block;
@@ -32,7 +31,29 @@ export const StyledPaymentRow = styled.li`
     margin-right: 10px;
   }
 `;
-
+export const StyledDeliveryGrid = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1.5fr;
+  gap: 20px;
+`;
+export const StyledGridRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr 1fr;
+  gap: 20px;
+  p {
+    color: ${({ theme }) => theme.textColors.lightGrey};
+  }
+  a {
+    color: ${({ theme }) => theme.textColors.orange};
+    text-decoration: none;
+  }
+  line-height: 18px;
+`;
+export const StyledGridRowTitle = styled.div`
+  font-weight: bold;
+`;
+export const StyledGridRowPrice = styled.div``;
+export const StyledGridRowTime = styled.div``;
 export const StyledPaymentTitle = styled.div`
   min-width: 200px;
   margin-right: 20px;
