@@ -1,0 +1,8 @@
+## Environment Variables
+
+### NEXT_PUBLIC_SITE_HOST
+- Purpose: This variable is used to store base location of our application. 
+
+### Access the Environment Variable in Your Code:
+- you can access environment variables using process.env: const baseURL = process.env.NEXT_PUBLIC_SITE_HOST;
+
