@@ -1,20 +1,21 @@
-import { useLoadScript, GoogleMap, MarkerF, InfoWindow } from '@react-google-maps/api';
-import type { NextPage } from 'next';
+import { useLoadScript, GoogleMap, MarkerF } from '@react-google-maps/api';
 import { useMemo, useState } from 'react';
-import { StyledMapContainer } from './GoogleMapComponent.styles';
-import { LatLngLiteral } from './GoogleMapComponent.types';
+import { StyledMapContainer } from './GoogleMap.styles';
+import { GoogleMapProps, LatLngLiteral } from './GoogleMap.types';
+import { Spinner } from '../Spinner';
 
 const libraries = ['places'];
 
-export const GoogleMapComponent: NextPage = () => {
-  const [infoWindowAnchor, setInfoWindowAnchor] = useState<google.maps.Marker | null>(null);
+export const GoogleMapComponent: React.FC<GoogleMapProps> = ({
+  latitude,
+  longitude,
+}: GoogleMapProps) => {
   const [infoWindowPosition, setInfoWindowPosition] = useState<LatLngLiteral | null>(null);
 
-  const mapCenter = useMemo(() => ({ lat: 27.672932021393862, lng: 85.31184012689732 }), []);
+  const mapCenter = useMemo(() => ({ lat: latitude, lng: longitude }), [latitude, longitude]);
 
   const mapOptions = useMemo<google.maps.MapOptions>(
     () => ({
-      disableDefaultUI: false,
       clickableIcons: true,
       scrollwheel: false,
     }),
@@ -23,11 +24,11 @@ export const GoogleMapComponent: NextPage = () => {
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY as string,
-    libraries: libraries as any,
+    libraries: libraries as [],
   });
 
   if (!isLoaded) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   const handleMapClick = (e: google.maps.MapMouseEvent) => {
@@ -35,7 +36,6 @@ export const GoogleMapComponent: NextPage = () => {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
       const clickedCoords = { lat, lng };
-      setInfoWindowAnchor(null);
       setInfoWindowPosition(clickedCoords);
     }
   };
@@ -49,18 +49,10 @@ export const GoogleMapComponent: NextPage = () => {
         mapTypeId={google.maps.MapTypeId.ROADMAP}
         mapContainerStyle={{ width: '100%', height: '30vh' }}
         onLoad={() => console.log('Map Component Loaded...')}
-        onClick={(e) => handleMapClick(e)}
+        onClick={handleMapClick}
       />
 
-      {infoWindowAnchor && (
-        <InfoWindow anchor={infoWindowAnchor}>
-          <div>This is an info window!</div>
-        </InfoWindow>
-      )}
-
-      {infoWindowPosition && (
-        <MarkerF position={infoWindowPosition} onLoad={(marker) => setInfoWindowAnchor(marker)} />
-      )}
+      {infoWindowPosition && <MarkerF position={infoWindowPosition} />}
     </StyledMapContainer>
   );
 };

@@ -39,7 +39,7 @@
     ".next/types/**/*.ts",
     "src/**/*.tsx", 
     "src/**/*.ts"
-, "src/components/GoogleMapComponent/components/Places"  ],
+, "src/components/GoogleMap/components/Places"  ],
   "exclude": [
     "node_modules"
   ]
