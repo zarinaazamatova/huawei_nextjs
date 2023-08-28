@@ -32,7 +32,10 @@
     "../huawei_nextjs/types.d.ts",
     ".next/types/**/*.ts",
     "src/**/*.tsx", 
-    "src/**/*.ts"
+    "src/**/*.ts", 
+    "src/components/GoogleMap/components/Places"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
