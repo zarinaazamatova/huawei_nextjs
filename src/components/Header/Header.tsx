@@ -11,11 +11,15 @@ import arrow from '../../assets/chevronDown.png';
 import heart from '../../assets/heart.png';
 import cart from '../../assets/cart.png';
 
-export const Header = () => {
+type HeaderProps = {
+  country: string | null;
+};
+
+export const Header = ({ country }: HeaderProps) => {
   return (
     <S.StyledContainer>
       <S.StylePromotion>
-        <Location />
+        <Location country={country} />
         <Bonus />
       </S.StylePromotion>
       <S.StyledHeaderCenter>

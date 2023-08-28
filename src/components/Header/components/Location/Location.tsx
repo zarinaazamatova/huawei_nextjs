@@ -7,7 +7,7 @@ import * as S from './Location.styles';
 import arrow from '../../../../assets/chevronDown.png';
 import { Cookies } from '../../../../constants';
 
-export const Location = (): ReactElement | null => {
+export const Location = ({ country }): ReactElement | null => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenCities, setIsOpenCities] = useState(false);
   const [showCity, setShowCity] = useState(false);
@@ -34,12 +34,13 @@ export const Location = (): ReactElement | null => {
   if (!showCity) {
     return null;
   }
-
   return (
     <div>
       <S.StyledDivLocation onMouseEnter={handleModalWindows} onMouseLeave={handleModalWindows}>
         <GeolocationIcon width={30} height={35} />
-        <S.StyledDivCity>{city ?? 'Москва'}</S.StyledDivCity>
+        <S.StyledDivCity>
+          {city ?? 'Москва'} {country}
+        </S.StyledDivCity>
         <S.StyledImage src={arrow} alt="arrow" className="icon-arrow-down" width={12} height={15} />
         <Modal isOpen={isOpen} onClose={handleModalWindows} onOpenCities={handleOpenCities} />
       </S.StyledDivLocation>

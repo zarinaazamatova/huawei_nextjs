@@ -42,13 +42,15 @@ const contactOptions = [
   },
 ];
 
-type SliderProps = {
+type HomeProps = {
   products: ProductType[];
+  country: string | null;
 };
 
-const Home = ({ products }: SliderProps): ReactElement => {
+const Home = ({ products, country }: HomeProps): ReactElement => {
+  console.log(country, 'ggggg');
   return (
-    <Layout>
+    <Layout country={country}>
       <div>
         <ProductSlider products={products} />
         <News />
@@ -62,12 +64,15 @@ const Home = ({ products }: SliderProps): ReactElement => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
   try {
     const products = productsData;
+    const response = await fetch('http://localhost:3000/api/countryDetection');
+    const data = await response.json();
     return {
       props: {
         products,
+        country: data.country,
       },
     };
   } catch (error) {
@@ -75,6 +80,7 @@ export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
     return {
       props: {
         products: [],
+        country: 'not found',
       },
     };
   }
