@@ -11,7 +11,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledNewsSection = styled.div`
   display: block;
-  margin-top: 180px;
+  margin-top: 30px;
   font-family: 'Roboto', sans-serif;
 `;
 

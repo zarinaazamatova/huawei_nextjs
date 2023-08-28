@@ -15,6 +15,7 @@
     "no-process-exit": "off",
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
+    "react/prop-types": "off",
     "react/function-component-definition": [
       2,
       {
@@ -31,6 +32,15 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
-  }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state", "ctx"]
+      }
+    ],
+    "react/no-array-index-key": "off"
+  },
+  "ignorePatterns": ["next.config.js"]
 }
