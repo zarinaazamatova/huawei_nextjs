@@ -7,7 +7,6 @@ import { Benefits } from '../Layout/Benefits';
 import { News } from '../components/News';
 import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
-import { GoogleMapComponent } from '../components/GoogleMap';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
 
 const contactOptions = [
