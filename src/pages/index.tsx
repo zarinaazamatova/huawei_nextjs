@@ -8,7 +8,6 @@ import { News } from '../components/News';
 import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
-
 const contactOptions = [
   {
     name: <YouTubeIcon width="18" height="18" fill="red" />,
@@ -42,15 +41,13 @@ const contactOptions = [
   },
 ];
 
-type HomeProps = {
+type SliderProps = {
   products: ProductType[];
-  country: string | null;
 };
 
-const Home = ({ products, country }: HomeProps): ReactElement => {
-  console.log(country, 'ggggg');
+const Home = ({ products }: SliderProps): ReactElement => {
   return (
-    <Layout country={country}>
+    <Layout>
       <div>
         <ProductSlider products={products} />
         <News />
@@ -64,15 +61,14 @@ const Home = ({ products, country }: HomeProps): ReactElement => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
   try {
     const products = productsData;
     const response = await fetch('http://localhost:3000/api/countryDetection');
-    const data = await response.json();
+    const result = await response.json();
     return {
       props: {
         products,
-        country: data.country,
       },
     };
   } catch (error) {
@@ -80,7 +76,6 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
     return {
       props: {
         products: [],
-        country: 'not found',
       },
     };
   }

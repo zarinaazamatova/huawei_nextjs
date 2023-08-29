@@ -6,13 +6,12 @@ import { Header } from '../components/Header';
 
 type LayoutProps = {
   children: ReactElement;
-  country: string | null;
 };
 
-export const Layout = ({ children, country }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <StyledLayout>
-      <Header country={country} />
+      <Header />
       {children}
       <Footer footerNavData={footerNavData} copyRightList={copyRightList} />
     </StyledLayout>
