@@ -8,6 +8,7 @@ import { News } from '../components/News';
 import { SimpleSlider } from '../components/SimpleSlider';
 import { ContactUsWidget } from '../components/ContactUsWidget';
 import { YouTubeIcon, VKIcon, OKIcon, TikTokIcon, TelegramIcon } from '../../public/assets/svg';
+
 const contactOptions = [
   {
     name: <YouTubeIcon width="18" height="18" fill="red" />,
@@ -64,15 +65,12 @@ export default Home;
 export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
   try {
     const products = productsData;
-    const response = await fetch('http://localhost:3000/api/countryDetection');
-    const result = await response.json();
     return {
       props: {
         products,
       },
     };
   } catch (error) {
-    console.error(error);
     return {
       props: {
         products: [],

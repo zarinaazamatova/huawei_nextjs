@@ -14,7 +14,6 @@ export const Location = (): ReactElement | null => {
 
   const city = getCookie(Cookies.City);
   const country = getCookie(Cookies.Country);
-  console.log(country, 'ccc');
 
   const handleModalWindows = (): void => {
     setIsOpen((prevState) => !prevState);
@@ -40,7 +39,9 @@ export const Location = (): ReactElement | null => {
     <div>
       <S.StyledDivLocation onMouseEnter={handleModalWindows} onMouseLeave={handleModalWindows}>
         <GeolocationIcon width={30} height={35} />
-        <S.StyledDivCity>{city ?? 'Москва'}</S.StyledDivCity>
+        <S.StyledDivCity>
+          {city ?? 'Москва'} {country && country}
+        </S.StyledDivCity>
         <S.StyledImage src={arrow} alt="arrow" className="icon-arrow-down" width={12} height={15} />
         <Modal isOpen={isOpen} onClose={handleModalWindows} onOpenCities={handleOpenCities} />
       </S.StyledDivLocation>
