@@ -1,4 +1,4 @@
-import { visaCard, masterCard, mirCard } from '../public/assets/png';
+import { visaCard, masterCard, mirCard } from '../../../public/assets/png';
 
 export const paymentOptionsList = [
   {

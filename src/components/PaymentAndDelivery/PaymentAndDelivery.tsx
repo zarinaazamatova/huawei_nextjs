@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
 import {
   StyledPaymentAndDeliveryContainer,
   StyledPaymentOptionsList,
@@ -10,85 +9,29 @@ import {
   StyledReturnOptionsContainer,
   StyledMapContainer,
   StyledOptionsContainer,
-  StyledDeliveryGrid,
-  StyledGridRow,
-  StyledGridRowTitle,
-  StyledGridRowPrice,
-  StyledGridRowTime,
+  StyledHeader,
 } from './PaymentAndDelivery.styles';
+import { PaymentOption, PaymentImage } from './PaymentAndDelivery.types';
+import { paymentOptionsList } from './PaymentAndDelivery.constants';
+import { DeliveryOptions } from './components/DeliveryOptions';
 
-import { PaymentOption, DeliveryOption } from './PaymentAndDelivery.types';
-
-import { paymentOptionsList, deliveryOptions } from '../../PaymentAndDeliveryData';
+const renderImages = (arr: PaymentImage[]) => {
+  return arr.map(({ imgData, alt }) => {
+    const { src, width, height } = imgData;
+    return <Image src={src} alt={alt} width={width} height={height} />;
+  });
+};
 
 export const PaymentAndDelivery = (): JSX.Element => {
   return (
     <StyledPaymentAndDeliveryContainer>
-      <h1>Доставка и оплата</h1>
+      <StyledHeader>Доставка и оплата</StyledHeader>
       <StyledMapContainer>
         <h3>Введите адрес или укажите его на карте</h3>
         <div>Google map component from Jyldyz</div>
-        <h1>Условия доставки</h1>
-        <p>Условия доставки отобразятся после уточнения адреса.</p>
         <hr />
       </StyledMapContainer>
-      <div>
-        <h1>Условия доставки</h1>
-        <StyledDeliveryGrid>
-          <StyledGridRow>
-            <p>Тип доставки</p>
-            <p>Стоимость</p>
-            <p>Получение</p>
-            <p>Дни доставки</p>
-            <p>Время доставки</p>
-            <p>Ассортимент</p>
-          </StyledGridRow>
-          {deliveryOptions.map(
-            ({
-              type,
-              description,
-              delivery,
-              deliveryDays,
-              deliveryTime,
-              assortment,
-            }: DeliveryOption) => {
-              return (
-                <StyledGridRow>
-                  <StyledGridRowTitle>{type}</StyledGridRowTitle>
-                  <StyledGridRowPrice>
-                    <div>
-                      {description.price} {typeof description.price === 'number' && '₽'}
-                    </div>
-                    {description.options.map((item) => {
-                      const isLink = item === 'Найти ближайший';
-                      return <div>{isLink ? <Link href="/">{item}</Link> : item}</div>;
-                    })}
-                  </StyledGridRowPrice>
-                  <div>{delivery}</div>
-                  <div>{deliveryDays}</div>
-                  <StyledGridRowTime>
-                    {deliveryTime.map((item, index) => {
-                      const isLast = index === deliveryTime.length - 1;
-                      return (
-                        <span>
-                          {item}
-                          {!isLast && ','}
-                        </span>
-                      );
-                    })}
-                  </StyledGridRowTime>
-                  <div>{assortment}</div>
-                </StyledGridRow>
-              );
-            },
-          )}
-        </StyledDeliveryGrid>
-        <p>
-          При доставке на закрытую территорию, необходимо заранее оформить пропуск, разрешающий
-          въезд транспортного средства. При отсутствии пропуска для въезда на закрытую территорию —
-          доставка будет осуществляться до КПП/шлагбаума (или иного ограничителя).
-        </p>
-      </div>
+      <DeliveryOptions />
       <StyledOptionsContainer>
         <h3>Способы оплаты</h3>
         <StyledPaymentOptionsList>
@@ -98,13 +41,7 @@ export const PaymentAndDelivery = (): JSX.Element => {
                 <StyledPaymentTitle>{title}</StyledPaymentTitle>
                 <StyledPaymentInfo>
                   {info}
-                  <div>
-                    {images &&
-                      images.map(({ imgData, alt }) => {
-                        const { src, width, height } = imgData;
-                        return <Image src={src} alt={alt} width={width} height={height} />;
-                      })}
-                  </div>
+                  <div>{images && renderImages(images)}</div>
                   <div>{url && <Link href={url.link}>{url.title}</Link>}</div>
                 </StyledPaymentInfo>
               </StyledPaymentRow>
@@ -113,7 +50,7 @@ export const PaymentAndDelivery = (): JSX.Element => {
         </StyledPaymentOptionsList>
       </StyledOptionsContainer>
       <StyledReturnOptionsContainer>
-        <h1>Условия возврата</h1>
+        <StyledHeader>Условия возврата</StyledHeader>
         <p>
           В случае, если вдруг вы решите вернуть уже оплаченный товар, вы можете позвонить в наш
           контакт-центр по телефону +7 495 221-72-26
