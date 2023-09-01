@@ -53,9 +53,8 @@ export const DeliveryOptions = () => {
                   <StyledTableData>{deliveryDays}</StyledTableData>
 
                   <StyledTableData>
-                    {deliveryTime.map((item, index) => {
-                      const isLast = index === deliveryTime.length - 1;
-                      console.log(isLast);
+                    {deliveryTime.map((item) => {
+                      const isLast = item === deliveryTime.at(-1);
                       return (
                         <span>
                           {item}
