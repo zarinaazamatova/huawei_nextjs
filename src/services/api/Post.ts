@@ -1,7 +1,7 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import axios from 'axios';
 
-const baseURL = 'http://localhost:3500';
+const baseURL = process.env.NEXT_PUBLIC_SITE_HOST;
 
 const axiosBaseQuery = axios.create({
   baseURL,
