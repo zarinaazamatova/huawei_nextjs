@@ -65,6 +65,7 @@ export default Home;
 export const getServerSideProps: GetServerSideProps<SliderProps> = async () => {
   try {
     const products = productsData;
+    await fetch('http://localhost:3000/api/countryDetection');
     return {
       props: {
         products,
