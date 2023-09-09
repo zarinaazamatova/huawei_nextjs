@@ -5,7 +5,10 @@
     "category": "event",
     "date": "07-07-2023",
     "img": "https://4lapy.ru/crop/610x280/upload/iblock/3cf/3cf28003e10aaa3002238869979e7de3.jpg",
-    "desc": "`abc`"
+    "desc": "`abc`",
+    "address": "53A Pulawska, Warsaw, Poland",
+    "latitude": 52.2354,
+    "longitude": 21.0095 
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "category": "event",
     "date": "07-07-2023",
     "img": "https://4lapy.ru/crop/610x280/upload/iblock/877/8770198b74f736c6b6ef06aad673418c.jpg",
-    "desc": "`abc `"
+    "desc": "`abc `",
+    "address": "Kyrgyzstan",
+    "latitude": 41.2044,
+    "longitude": 74.7661 
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "category": "event",
     "date": "07-07-2023",
     "img": "https://4lapy.ru/crop/610x280/upload/iblock/533/5332850376fc29e7194874fa9a21858d.jpg",
-    "desc": "`abc`"
+    "desc": "`abc`",
+    "address": "Moscow",
+    "latitude": 55.7558,
+    "longitude": 37.6176 
   },
   {
     "id": 4,

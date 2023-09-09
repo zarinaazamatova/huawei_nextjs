@@ -5,4 +5,7 @@ export type News = {
   date: string;
   img: string;
   desc: string;
+  address?: string;
+  latitude?: number;
+  longitude?: number;
 };
