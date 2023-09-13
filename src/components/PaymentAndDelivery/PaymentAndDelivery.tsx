@@ -15,14 +15,13 @@ import { PaymentOption, PaymentImage } from './PaymentAndDelivery.types';
 import { paymentOptionsList } from './PaymentAndDelivery.constants';
 import { DeliveryOptions } from './components/DeliveryOptions';
 
-const renderImages = (arr: PaymentImage[]) => {
-  return arr.map(({ imgData, alt }) => {
-    const { src, width, height } = imgData;
-    return <Image src={src} alt={alt} width={width} height={height} />;
-  });
-};
-
 export const PaymentAndDelivery = (): JSX.Element => {
+  const renderImages = (arr: PaymentImage[]) => {
+    return arr.map(({ imgData: { src, width, height }, alt }) => {
+      return <Image src={src} alt={alt} width={width} height={height} />;
+    });
+  };
+
   return (
     <StyledPaymentAndDeliveryContainer>
       <StyledHeader>Доставка и оплата</StyledHeader>
